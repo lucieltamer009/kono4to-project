@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدمان الميديا</title>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --primary-light: #3b82f6;
+            --secondary: #d97706;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e1b4b 100%);
+            color: white;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            color: #fbbf24;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin: 30px 0 20px 0;
+            padding-bottom: 8px;
+            border-bottom: 3px solid var(--secondary);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 24px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .badge {
+            background-color: #eff6ff;
+            color: var(--primary-light);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            border: 1px solid #bfdbfe;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            background: var(--card-bg);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: right;
+        }
+
+        th, td {
+            padding: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            background-color: #f1f5f9;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .quote-box {
+            background: #fffbebfb;
+            border-right: 4px solid var(--secondary);
+            padding: 16px;
+            border-radius: 8px;
+            margin-top: 10px;
+            font-style: italic;
+            color: #92400e;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Header Section -->
+        <header>
+            <h1>إدمان الميديا</h1>
+            <p>دراسة شاملة ودوافع استخدام وسائل التواصل الاجتماعي وخطورتها الروحية والنفسية</p>
+        </header>
+
+        <!-- Section 1: Introduction -->
+        <h2 class="section-title">
+            <span>🔪</span> تشبيه الميديا بالسكين
+        </h2>
+        <div class="card" style="margin-bottom: 30px;">
+            <h3>الاستعمال حسب الاختيار</h3>
+            <p>شَبَّه أبونا بيشوي الأنطوني وأبونا بولس جورج الميديا بسكينة وقالوا: "السكينة دي صح ولا غلط؟" الإجابة كانت حسب الاستعمال؛ لأنها ممكن تستعمل في حاجات حلوة وحاجات وحشة زي القتل.</p>
+        </div>
+
+        <!-- Section 2: Motives for using media -->
+        <h2 class="section-title">
+            <span>💡</span> دوافع استخدام الميديا
+        </h2>
+        <div class="grid">
+            <div class="card">
+                <h3>متاحة وسهلة وتوفر الاحتياجات</h3>
+                <p>لأنها متاحة وسهلة ومش بتكلف حاجة، وتوفر للشخص الحاجة اللي بيحتاجها. الشخص هو اللي بيختار على حسب ذوقه وتغطي معظم احتياجات الناس.</p>
+            </div>
+            <div class="card">
+                <h3>دوائر الاهتمامات والمسلية</h3>
+                <p>بتغطي دوائر اهتمامك زي إن حد يشوف إزاي يطبخ أكلة أو نتائج ماتشات. إنها مسلية وبترضي الفضول في متابعة آخر الأخبار والتفاعل عليها.</p>
+            </div>
+            <div class="card">
+                <h3>الشهرة والرغبة في المكسب</h3>
+                <p>بتسد شعور الإنسان ورغبته في الشهرة وإنها ممكن تكون مكسب. كل الأسباب دي خلت الناس مشهورة أو مشغولة بالميديا.</p>
+            </div>
+            <div class="card">
+                <h3>ملخص الدوافع</h3>
+                <div class="badge-container">
+                    <span class="badge">إتاحة وسهولة</span>
+                    <span class="badge">تسلية وفضول</span>
+                    <span class="badge">إشباع الاهتمامات</span>
+                    <span class="badge">الشهرة والمكسب</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: Dangers of Media -->
+        <h2 class="section-title">
+            <span>⚠️</span> ما هي خطورة الميديا؟
+        </h2>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>نوع الخطورة / الأثر</th>
+                        <th>التفاصيل والشرح</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>التعلق والإدمان</strong></td>
+                        <td>أول ما حد فينا بيلاقي دقيقة فاضية بيروح بسرعة على أي موقع من مواقع التواصل الاجتماعي، ودا إدمان مؤذي لدرجة إن ممكن تبقى الحاجة اللي انت بتتفرج عليها دي انت شفتها قبل كده.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>سرقة الوقت</strong></td>
+                        <td>ربنا هيحاسبنا على كل وزنة هو إداها لنا، واللي منها الوقت اللي بيضيع مننا في استخدام الميديا.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>إطفاء الروحانية في القلب</strong></td>
+                        <td>"لا أحد يستطيع أن يخدم سيدين"، وهذا الكلام ينطبق على الميديا والرب؛ لأننا وصلنا لحالة أن من الممكن أن حد يعبد الميديا أكتر من ربنا لأنها بتشتتنا، لدرجة إن ممكن الواحد لما ييجي وقت الصلاة ميقدرش لأنه استنفذ كل طاقته في الميديا حتى إنها بتشيل من الإنسان فكرة إنه يجيب كتاب روحي يقرأه وأسهل له إنه يشغل مزمور أو صلاة على الموبايل وهو مش مركز ودي كلها حروب من الشيطان.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>باب للعثرات والشهوات</strong></td>
+                        <td>ممكن الواحد تطلع له حاجة وحشة في الميديا ولو بص عليها هتجيله أكتر وببقى بيبص من باب الفضول وبعدها يبقى بيبص لحاجات وبينشغل بحاجات لا ترضي صلاح الله.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>الانعزال والبرود الأسري</strong></td>
+                        <td>كل واحد مركز في اللي عنده على الميديا ومش شايف الناس الثانية وأصبحت علاقاتنا باللي حوالينا باردة وفاترة، عشان الميديا استبدلتها؛ يعني ربنا خلقنا عشان نحب بعض وننهتم ببعض فكل واحد بقى عامل صندوق أسود حاطط فيه كل أفكاره ومصاعره ومش عايز يطلعها لحد.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>تغيير الفكر التشريعي</strong></td>
+                        <td>بقينا بنشرع تشريعات جديدة عشان اللي سيطر علينا مش اللي قاله الله في كتابه المقدس إنما اللي قالته الميديا فحصل خراب في النفسيات.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>تزييف الحقائق والتركيز</strong></td>
+                        <td>استخدام الكثير من الكذب والقليل من الحق. بالإضافة لثقافة الدقيقة والنصف: الإنسان مبقاش مستحمل إنه يركز في حاجة لمدة أكثر من دقيقة ونصف.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>الكآبة وفقدان الغاية</strong></td>
+                        <td>لأن الله خلقنا لنلتواصل وننتج وننتج وإحنا معملناش كده بسبب انشغالنا في الميديا.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Section 4: Summary -->
+        <h2 class="section-title">
+            <span>📌</span> الخلاصة
+        </h2>
+        
+        <div class="quote-box" style="text-align: center; font-size: 1.15rem; font-style: normal; padding: 24px;">
+            <strong>الخلاصة:</strong> الميديا وزنة مهمة جداً ممكن تُستخدم في الخير أو الشر، فعلينا أن نتحكم فيها ولا نخليهاش تسيطر علينا، إنما نستعملها للخير فقط ونخليهاش تعزلنا عن ربنا وعن العالم[span_1](start_span)[span_1](end_span).
+        </div>
+
+        <footer>
+            <p>ملخص ومحتوى دراسي | إدمان الميديا وتأثيرها الروحي والنفسي[span_2](start_span)[span_2](end_span)</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
