@@ -1,0 +1,76 @@
+body {
+    background-color: #f5f9f6;
+    border-radius: 20px;
+}
+h1 {
+    text-align: center;
+    padding: 7px;
+    margin-top: 12px;
+    border-radius: 7px;
+    background-color: #f5f9f6;
+    color: #09464c;
+    font-size: 30px;
+}
+#joke2 {
+    text-align: center;
+    padding: 7px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: #f5f9f6;
+}
+#joke3 {
+    padding: 7px;
+    margin-top: 12px;
+    color: white;
+    background-color: #073e38;
+    border-radius: 12px;
+    direction: rtl;
+}
+#part {
+    direction: rtl;
+    background-color: #f5f9f6;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 20px;
+}
+#joke4 {
+    background-color: #09464c;
+    border:solid;
+    color: white;
+    border-radius: 12px;
+    padding: 7px;
+    margin-top: 10px;
+}
+#list2 {
+    font-weight: bold;
+}
+#loki {
+    font-size: 22px;
+    font-weight: 15px;
+}
+#part2 {
+    direction: rtl;
+    background-color: #f5f9f6;
+}
+#end {
+    font-size: 22px;
+    background-color: #073e38;
+    border-radius: 15px;
+    padding: 12px;
+    margin-top: 10px;
+    color: white;
+}
+#yes {
+    border-radius: 12px;
+    padding: 12px;
+    margin-top: 12px;
+    background-color: #f5f9f6;
+    color: #073e38;
+    font-weight: 500;
+    font-size: 21px;
+}
+#yees {
+    font-size: 20px;
+    font-weight: 400;
+}
