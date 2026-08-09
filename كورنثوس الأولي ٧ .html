@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>1 كورنثوس - الأصحاح السابع</title>
+
     <style>
         :root {
             --primary: #1e3a8a;
@@ -30,6 +32,128 @@
             padding: 20px;
         }
 
+        nav {
+            max-width: 1100px;
+            margin: 0 auto 25px auto;
+            padding: 15px 25px;
+            background: linear-gradient(
+                135deg,
+                #1e3a8a 0%,
+                #1e1b4b 100%
+            );
+            color: white;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        nav h2 {
+            color: #fbbf24;
+            font-size: 1.5rem;
+        }
+
+        nav h3 {
+            font-size: 1rem;
+            font-weight: normal;
+            opacity: 0.9;
+            text-align: center;
+        }
+
+        #menuBtn {
+            border: none;
+            background: #fbbf24;
+            color: #1e1b4b;
+            width: 45px;
+            height: 45px;
+            border-radius: 10px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #menuBtn:hover {
+            transform: scale(1.05);
+            background: #f59e0b;
+        }
+
+        #overlay {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.55);
+            display: none;
+            z-index: 999;
+        }
+
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: min(90%, 500px);
+            max-height: 85vh;
+            overflow-y: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+            display: none;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .popup h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--secondary);
+        }
+
+        .popup a {
+            display: block;
+            text-decoration: none;
+            color: var(--primary);
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            padding: 11px;
+            margin: 8px 0;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .popup a:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateX(-3px);
+        }
+
+        .popup hr {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 18px 0;
+        }
+
+        #closeBtn {
+            margin-top: 15px;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 10px;
+            background: #dc2626;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        #closeBtn:hover {
+            background: #b91c1c;
+        }
+
         .container {
             max-width: 1100px;
             margin: 0 auto;
@@ -38,7 +162,11 @@
         header {
             text-align: center;
             padding: 40px 20px;
-            background: linear-gradient(135deg, #1e3a8a 0%, #1e1b4b 100%);
+            background: linear-gradient(
+                135deg,
+                #1e3a8a 0%,
+                #1e1b4b 100%
+            );
             color: white;
             border-radius: 16px;
             margin-bottom: 30px;
@@ -69,7 +197,10 @@
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(300px, 1fr)
+            );
             gap: 20px;
             margin-bottom: 30px;
         }
@@ -131,9 +262,11 @@
             text-align: right;
         }
 
-        th, td {
+        th,
+        td {
             padding: 16px;
             border-bottom: 1px solid var(--border);
+            vertical-align: top;
         }
 
         th {
@@ -147,7 +280,7 @@
         }
 
         .quote-box {
-            background: #fffbebfb;
+            background: #fffbeb;
             border-right: 4px solid var(--secondary);
             padding: 16px;
             border-radius: 8px;
@@ -164,38 +297,144 @@
             border-top: 1px solid var(--border);
             margin-top: 40px;
         }
+
+        @media (max-width: 700px) {
+            body {
+                padding: 12px;
+            }
+
+            nav {
+                padding: 12px 15px;
+            }
+
+            nav h2 {
+                font-size: 1.2rem;
+            }
+
+            nav h3 {
+                font-size: 0.8rem;
+            }
+
+            #menuBtn {
+                width: 40px;
+                height: 40px;
+            }
+
+            header {
+                padding: 30px 15px;
+            }
+
+            header h1 {
+                font-size: 1.7rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.3rem;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            th,
+            td {
+                padding: 12px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 450px) {
+            nav h3 {
+                display: none;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            header p {
+                font-size: 0.9rem;
+            }
+
+            .section-title {
+                font-size: 1.2rem;
+            }
+
+            .card h3 {
+                font-size: 1.05rem;
+            }
+
+            .card p {
+                font-size: 0.9rem;
+            }
+
+            .popup {
+                padding: 20px;
+                width: 92%;
+            }
+        }
     </style>
 </head>
+
 <body>
 
+    <nav>
+        <h2>كنوشتو 26</h2>
+
+        <h3>فريق بولس الرسول مجموعة 2</h3>
+
+        <button id="menuBtn" type="button">☰</button>
+    </nav>
+
     <div class="container">
-        
-        <!-- Header Section -->
+
         <header>
             <h1>الأصحاح السابع</h1>
             <p>الزواج، العزوبية، والدعوة الشخصية</p>
         </header>
 
-        <!-- Section 1: Main Topics -->
         <h2 class="section-title">
-            <span>📖</span> المحاور الرئيسية في الأصحاح
+            <span>📖</span>
+            المحاور الرئيسية في الأصحاح
         </h2>
+
         <div class="grid">
+
             <div class="card">
                 <h3>العلاقة الزوجية والواجبات</h3>
-                <p>يوضح أن الزواج إطار مقدس، مشدداً على ضرورة تبادل الحقوق والواجبات الزوجية بين الطرفين بمحبة واهتمام.</p>
+                <p>
+                    يوضح أن الزواج إطار مقدس، مشدداً على ضرورة تبادل الحقوق والواجبات الزوجية بين الطرفين بمحبة واهتمام.
+                </p>
             </div>
+
             <div class="card">
                 <h3>الطلاق والعلاقة مع غير المؤمنين</h3>
-                <p>ينهى عن الطلاق بين المؤمنين. وفي حال وجود زوج غير مؤمن، يوصي المؤمن بالبقاء معه ما دام غير المؤمن راضياً بالسكن معه، لأن المؤمن يقدس بيته. أما إذا اختار غير المؤمن الفراق، فالطرف المؤمن غير مُستعبَد في هذه الحالة.</p>
+                <p>
+                    ينهى عن الطلاق بين المؤمنين. وفي حال وجود زوج غير مؤمن، يوصي المؤمن بالبقاء معه ما دام غير المؤمن راضياً بالسكن معه، لأن المؤمن يقدس بيته. أما إذا اختار غير المؤمن الفراق، فالطرف المؤمن غير مُستعبَد في هذه الحالة.
+                </p>
             </div>
+
             <div class="card">
                 <h3>مبدأ البقاء على الحالة</h3>
-                <p>ينصح بولس بأن يستمر كل شخص في الحالة التي دُعي فيها (سواء كان عبداً أم حراً)، لأن الأمانة لله والوصية أهم من المراكز الاجتماعية.</p>
+                <p>
+                    ينصح بولس بأن يستمر كل شخص في الحالة التي دُعي فيها، سواء كان عبداً أم حراً، لأن الأمانة لله والوصية أهم من المراكز الاجتماعية.
+                </p>
             </div>
+
             <div class="card">
                 <h3>العزوبية والتفرغ لخدمة الرب</h3>
-                <p>يفضّل بولس العزوبية لمن يستطيع تحملها، ليس لأن الزواج خطية، بل لقلة الانشغالات الدنيوية والتفرغ الكامل للرب.</p>
+                <p>
+                    يفضّل بولس العزوبية لمن يستطيع تحملها، ليس لأن الزواج خطية، بل لقلة الانشغالات الدنيوية والتفرغ الكامل للرب.
+                </p>
+
                 <div class="badge-container">
                     <span class="badge">إطار مقدس</span>
                     <span class="badge">الأمانة لله</span>
@@ -203,56 +442,246 @@
                     <span class="badge">الحرية في الاختيار</span>
                 </div>
             </div>
+
         </div>
 
-        <!-- Section 2: Summary Table -->
         <h2 class="section-title">
-            <span>⚖️</span> ملخص الحالات والتوجيهات
+            <span>⚖️</span>
+            ملخص الحالات والتوجيهات
         </h2>
-        
+
         <div class="table-container">
+
             <table>
+
                 <thead>
                     <tr>
                         <th>الحالة الاجتماعية</th>
                         <th>التوجيه والنصيحة الروحية</th>
                     </tr>
                 </thead>
+
                 <tbody>
+
                     <tr>
-                        <td><strong>الزواج</strong></td>
-                        <td>إطار مقدس يتطلب تبادل الحقوق والواجبات بمحبة، والامتناع عن الطلاق.</td>
+                        <td>
+                            <strong>الزواج</strong>
+                        </td>
+
+                        <td>
+                            إطار مقدس يتطلب تبادل الحقوق والواجبات بمحبة، والامتناع عن الطلاق.
+                        </td>
                     </tr>
+
                     <tr>
-                        <td><strong>الارتباط بغير مؤمن</strong></td>
-                        <td>البقاء معه إذا كان راضياً للسكن لأن المؤمن يقدس بيته، وإن اختار غير المؤمن الفراق فالمؤمن ليس مستعبداً.</td>
+                        <td>
+                            <strong>الارتباط بغير مؤمن</strong>
+                        </td>
+
+                        <td>
+                            البقاء معه إذا كان راضياً للسكن لأن المؤمن يقدس بيته، وإن اختار غير المؤمن الفراق فالمؤمن ليس مستعبداً.
+                        </td>
                     </tr>
+
                     <tr>
-                        <td><strong>الحالة الاجتماعية (عبد / حر)</strong></td>
-                        <td>البقاء على الحالة التي دُعي فيها الإنسان، لأن الأمانة لله أهم من المراكز.</td>
+                        <td>
+                            <strong>الحالة الاجتماعية (عبد / حر)</strong>
+                        </td>
+
+                        <td>
+                            البقاء على الحالة التي دُعي فيها الإنسان، لأن الأمانة لله أهم من المراكز.
+                        </td>
                     </tr>
+
                     <tr>
-                        <td><strong>العزوبية</strong></td>
-                        <td>مُفضلة لمن يستطيعها لتسهيل التفرغ الكامل للرب وتقليل الانشغالات الدنيوية.</td>
+                        <td>
+                            <strong>العزوبية</strong>
+                        </td>
+
+                        <td>
+                            مُفضلة لمن يستطيعها لتسهيل التفرغ الكامل للرب وتقليل الانشغالات الدنيوية.
+                        </td>
                     </tr>
+
                 </tbody>
+
             </table>
+
         </div>
 
-        <!-- Section 3: Chapter Summary -->
         <h2 class="section-title">
-            <span>📌</span> خلاصة الأصحاح
+            <span>📌</span>
+            خلاصة الأصحاح
         </h2>
-        
-        <div class="quote-box" style="text-align: center; font-size: 1.15rem; font-style: normal; padding: 24px;">
-            <strong>خلاصة الأصحاح السابع:</strong> يركز الأصحاح على الضبط الذاتي وإمكانية التفرغ للرب في مختلف الحالات الاجتماعية، مع إعطاء الحرية في الاختيار بين الزواج والعزوبية بحسب موهبة كل شخص ودعوة الله له.
+
+        <div
+            class="quote-box"
+            style="
+                text-align: center;
+                font-size: 1.15rem;
+                font-style: normal;
+                padding: 24px;
+            "
+        >
+            <strong>خلاصة الأصحاح السابع:</strong>
+            يركز الأصحاح على الضبط الذاتي وإمكانية التفرغ للرب في مختلف الحالات الاجتماعية، مع إعطاء الحرية في الاختيار بين الزواج والعزوبية بحسب موهبة كل شخص ودعوة الله له.
         </div>
 
         <footer>
-            <p>دراسة الكتاب المقدس | رسالة بولس الأولى إلى أهل كورنثوس - الأصحاح السابع</p>
+            <p>
+                دراسة الكتاب المقدس |
+                رسالة بولس الأولى إلى أهل كورنثوس - الأصحاح السابع
+            </p>
         </footer>
 
     </div>
+
+    <div id="overlay"></div>
+
+    <div class="popup" id="popup">
+
+        <h2>الدروس والقائمة</h2>
+
+        <a href="index.html">
+            الصفحة الرئيسية
+        </a>
+
+        <a href="الصليب.html">
+            الصليب
+        </a>
+
+        <a href="ابونا مخاءيل ابراهيم .html">
+            أبونا مخائيل إبراهيم
+        </a>
+
+        <a href="مقدمه رساله كولوسي .html">
+            مقدمة رسالة كولوسي
+        </a>
+
+        <a href="لماذا موت الصليب.html">
+            لماذا موت الصليب؟
+        </a>
+
+        <a href="سمارها و بياضها.html">
+            سمارها وبياضها
+        </a>
+
+        <a href="كولوسي 1, 2 .html">
+            كولوسي 1، 2
+        </a>
+
+        <a href="كلوسى 3.html">
+            كولوسي 3
+        </a>
+
+        <a href="كولوسى 4.html">
+            كولوسي 4
+        </a>
+
+        <a href="مقدمة عن كورنثوس.html">
+            مقدمة عن كورنثوس
+        </a>
+
+        <a href="kno4to.html">
+            كورنثوس الأصحاحات 1 و2 و3 و4
+        </a>
+
+        <a href="كورنثوس 5 6.html">
+            كورنثوس 5، 6
+        </a>
+
+        <a href="كورنثوس الأولي ٧ .html">
+            كورنثوس الأولى 7
+        </a>
+
+        <a href="كورنثوس ٨ .html">
+            كورنثوس 8
+        </a>
+
+        <a href="كورنثوس ١١ .html">
+            كورنثوس 11
+        </a>
+
+        <a href="كورنثوس الأولي ١٢ .html">
+            كورنثوس 12
+        </a>
+
+        <a href="كورنثوس 13. html">
+            كورنثوس 13
+        </a>
+
+        <a href="كورنثوس 14 .html">
+            كورنثوس 14
+        </a>
+
+        <a href="كورنثوس ١٦ .html">
+            كورنثوس 16
+        </a>
+
+        <a href="ادمان الميديا .html">
+            إدمان الميديا
+        </a>
+
+        <hr>
+
+        <a href="طقس القداس .html">
+            الطقس
+        </a>
+
+        <button id="closeBtn" type="button">
+            إغلاق
+        </button>
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const menuBtn = document.getElementById("menuBtn");
+            const popup = document.getElementById("popup");
+            const overlay = document.getElementById("overlay");
+            const closeBtn = document.getElementById("closeBtn");
+
+            function openMenu() {
+                popup.style.display = "block";
+                overlay.style.display = "block";
+                document.body.style.overflow = "hidden";
+            }
+
+            function closeMenu() {
+                popup.style.display = "none";
+                overlay.style.display = "none";
+                document.body.style.overflow = "";
+            }
+
+            menuBtn.addEventListener("click", function () {
+                openMenu();
+            });
+
+            closeBtn.addEventListener("click", function () {
+                closeMenu();
+            });
+
+            overlay.addEventListener("click", function () {
+                closeMenu();
+            });
+
+            document.addEventListener("keydown", function (event) {
+                if (event.key === "Escape") {
+                    closeMenu();
+                }
+            });
+
+            const menuLinks = popup.querySelectorAll("a");
+
+            menuLinks.forEach(function (link) {
+                link.addEventListener("click", function () {
+                    closeMenu();
+                });
+            });
+
+        });
+    </script>
 
 </body>
 </html>
