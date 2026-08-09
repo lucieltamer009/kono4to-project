@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>يعظم انتصارنا بالذي أحبنا</title>
+
     <style>
         :root {
             --primary: #1e3a8a;
@@ -30,6 +33,128 @@
             padding: 20px;
         }
 
+        nav {
+            max-width: 1100px;
+            margin: 0 auto 25px auto;
+            padding: 15px 25px;
+            background: linear-gradient(
+                135deg,
+                #1e3a8a 0%,
+                #1e1b4b 100%
+            );
+            color: white;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        nav h2 {
+            color: #fbbf24;
+            font-size: 1.5rem;
+        }
+
+        nav h3 {
+            font-size: 1rem;
+            font-weight: normal;
+            opacity: 0.9;
+            text-align: center;
+        }
+
+        #menuBtn {
+            border: none;
+            background: #fbbf24;
+            color: #1e1b4b;
+            width: 45px;
+            height: 45px;
+            border-radius: 10px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #menuBtn:hover {
+            transform: scale(1.05);
+            background: #f59e0b;
+        }
+
+        #overlay {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.55);
+            display: none;
+            z-index: 999;
+        }
+
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: min(90%, 500px);
+            max-height: 85vh;
+            overflow-y: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+            display: none;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .popup h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--secondary);
+        }
+
+        .popup a {
+            display: block;
+            text-decoration: none;
+            color: var(--primary);
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            padding: 11px;
+            margin: 8px 0;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .popup a:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateX(-3px);
+        }
+
+        .popup hr {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 18px 0;
+        }
+
+        #closeBtn {
+            margin-top: 15px;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 10px;
+            background: #dc2626;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        #closeBtn:hover {
+            background: #b91c1c;
+        }
+
         .container {
             max-width: 1100px;
             margin: 0 auto;
@@ -38,7 +163,11 @@
         header {
             text-align: center;
             padding: 40px 20px;
-            background: linear-gradient(135deg, #1e3a8a 0%, #1e1b4b 100%);
+            background: linear-gradient(
+                135deg,
+                #1e3a8a 0%,
+                #1e1b4b 100%
+            );
             color: white;
             border-radius: 16px;
             margin-bottom: 30px;
@@ -131,7 +260,8 @@
             text-align: right;
         }
 
-        th, td {
+        th,
+        td {
             padding: 16px;
             border-bottom: 1px solid var(--border);
         }
@@ -164,160 +294,454 @@
             border-top: 1px solid var(--border);
             margin-top: 40px;
         }
+
+        @media (max-width: 700px) {
+            body {
+                padding: 12px;
+            }
+
+            nav {
+                padding: 12px 15px;
+            }
+
+            nav h2 {
+                font-size: 1.2rem;
+            }
+
+            nav h3 {
+                font-size: 0.8rem;
+            }
+
+            #menuBtn {
+                width: 40px;
+                height: 40px;
+            }
+
+            header {
+                padding: 30px 15px;
+            }
+
+            header h1 {
+                font-size: 1.7rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.3rem;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            th,
+            td {
+                padding: 12px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 450px) {
+            nav h3 {
+                display: none;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            header p {
+                font-size: 0.9rem;
+            }
+
+            .section-title {
+                font-size: 1.2rem;
+            }
+
+            .card h3 {
+                font-size: 1.05rem;
+            }
+
+            .card p {
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
+
 <body>
 
+    <nav>
+        <h2>
+            كنوشتو 26
+        </h2>
+
+        <h3>
+            فريق بولس الرسول مجموعة 2
+        </h3>
+
+        <button id="menuBtn" type="button">
+            ☰
+        </button>
+    </nav>
+
     <div class="container">
-        
-        <!-- Header Section -->
+
         <header>
             <h1>يعظم انتصارنا بالذي أحبنا</h1>
             <p>ملخص شامل ومُنظّم لمادة الصليب (عقيدياً، طقسياً، وروحياً)</p>
         </header>
 
-        <!-- Section 1: Sign of the Cross -->
         <h2 class="section-title">
             <span>✝️</span> رشم الصليب
         </h2>
+
         <div class="grid">
+
             <div class="card">
                 <h3>إعلان الإيمان</h3>
                 <p>إعلان صريح بعقيدة الثالوث القدوس (ثلاثة أقانيم في إله واحد) ووحدانية الله.</p>
             </div>
+
             <div class="card">
                 <h3>عقيدة التجسد والفداء</h3>
                 <p>تذكار نزول الله وتجسده لخلاصنا، وموته عنا للمصالحة وغفران الخطايا التي حملها على الخشبة.</p>
             </div>
+
             <div class="card">
                 <h3>النقل والافتخار</h3>
                 <p>علامة الانتقال من الظلمة إلى النور ومن عبودية إبليس إلى حرية مجد أولاد الله، وهو العلامة المميزة للمؤمنين.</p>
             </div>
+
             <div class="card">
                 <h3>القوة والبركة</h3>
                 <p>يمنح قوة لإخماد الشهوات وإبطال سلطان الخطية، وهو الجسر الذي أعاد العلاقة بين السماء والأرض.</p>
             </div>
+
         </div>
 
-        <!-- Section 2: Liturgical Aspects -->
         <h2 class="section-title">
             <span>⛪</span> الصليب طقسياً
         </h2>
+
         <div class="grid">
+
             <div class="card">
                 <h3>يومياً</h3>
+
                 <div class="badge-container">
                     <span class="badge">صلاة الساعة السادسة</span>
                     <span class="badge">صلاة الساعة التاسعة</span>
                 </div>
             </div>
+
             <div class="card">
                 <h3>أسبوعياً</h3>
+
                 <div class="badge-container">
                     <span class="badge">صوم يوم الجمعة</span>
                     <span class="badge">تسبحة الجمعة</span>
                 </div>
             </div>
+
             <div class="card">
                 <h3>سنوياً</h3>
+
                 <div class="badge-container">
                     <span class="badge">عيد الصليب (17 توت)</span>
                     <span class="badge">عيد الصليب (10 برمهات)</span>
                     <span class="badge">الجمعة العظيمة</span>
                 </div>
             </div>
+
             <div class="card">
                 <h3>استخدامات طقسية</h3>
                 <p>يدخل الصليب في كافة أركان الطقس: الكنيسة، المذبح، الصلوات، الملابس الكنسية، والبخور.</p>
             </div>
+
         </div>
 
-        <!-- Section 3: Doctrinal Aspects -->
         <h2 class="section-title">
             <span>📖</span> الصليب عقيدياً
         </h2>
-        
+
         <div class="table-container">
+
             <table>
+
                 <thead>
                     <tr>
                         <th>شرطا الموت المحيي (البابا أثناسيوس)</th>
                         <th>التفسير والسبب</th>
                     </tr>
                 </thead>
+
                 <tbody>
+
                     <tr>
-                        <td><strong>موت بأيدي بشر (By Human Hands)</strong></td>
-                        <td>لأن المسيح هو "الحياة"، ولا يمكن للمرض أو الضعف أن يقهره. كان يجب أن يُسلم للموت بإرادته وبأيدي آخرين ليقهر الموت.</td>
+                        <td>
+                            <strong>موت بأيدي بشر (By Human Hands)</strong>
+                        </td>
+
+                        <td>
+                            لأن المسيح هو "الحياة"، ولا يمكن للمرض أو الضعف أن يقهره.
+                            كان يجب أن يُسلم للموت بإرادته وبأيدي آخرين ليقهر الموت.
+                        </td>
                     </tr>
+
                     <tr>
-                        <td><strong>موت علني (Public Death)</strong></td>
-                        <td>لتكون قيامته حقيقة مؤكدة يراها ويشهد لها الجميع، ودليلاً قاطعاً على جبل الجلجثة.</td>
+                        <td>
+                            <strong>موت علني (Public Death)</strong>
+                        </td>
+
+                        <td>
+                            لتكون قيامته حقيقة مؤكدة يراها ويشهد لها الجميع،
+                            ودليلاً قاطعاً على جبل الجلجثة.
+                        </td>
                     </tr>
+
                 </tbody>
+
             </table>
+
         </div>
 
-        <h3 style="color: var(--primary); margin: 20px 0 10px 0;">لماذا الصليب تحديداً؟ (أسباب الفداء بالصليب)</h3>
+        <h3 style="color: var(--primary); margin: 20px 0 10px 0;">
+            لماذا الصليب تحديداً؟ (أسباب الفداء بالصليب)
+        </h3>
+
         <div class="grid">
+
             <div class="card">
                 <h3>1. شجرة الخلاص</h3>
                 <p>مقابل شجرة السقوط: السقوط جاء بثمرة أكلناها فمتنا، والخلاص جاء بثمرة معلقة على شجرة نأكلها فنحيا.</p>
             </div>
+
             <div class="card">
                 <h3>2. البركة أمام اللعنة</h3>
                 <p>المسيح افتدانا من لعنة الناموس إذ صار لعنة لأجلنا، فرفعت اللعنة وصارت الخشبة ينبوع بركة.</p>
             </div>
+
             <div class="card">
                 <h3>3. الإحتضان</h3>
                 <p>الموت صلباً هو الميتة الوحيدة التي يفتح فيها الإنسان يديه، ليبسط يديه ويجتذب الشعوب ويوحدهم فيه.</p>
             </div>
+
             <div class="card">
                 <h3>4. تطهير الهواء</h3>
                 <p>صُلِب معلقاً في الهواء لهزيمة الشيطان ("رئيس سلطان الهواء") وتطهير الهواء وفتح الطريق للسماء.</p>
             </div>
+
             <div class="card">
                 <h3>5. حفظ الجسد (الوحدة)</h3>
                 <p>لم تُكسر عظامه ليتم الكتاب ("عظم لا يُكسر منه") ولإعلان وحدة الكنيسة وعدم انقسامها.</p>
             </div>
+
             <div class="card">
                 <h3>6. تحقيق النبوات وسفك الدم</h3>
                 <p>تحققت النبوات (ثقبوا يدي ورجلي)، وبدون سفك دم لا تحصل مغفرة، مع اختيار أشنع ميتة لإثبات أعظم محبة.</p>
             </div>
+
         </div>
 
-        <!-- Section 4: Spiritual Aspects -->
         <h2 class="section-title">
             <span>🌱</span> الصليب روحياً (الفهم الروحي للتجارب)
         </h2>
+
         <div class="grid">
+
             <div class="card">
                 <h3>تجارب للتنقية</h3>
                 <p>لتطهير الأبرار من "البر الذاتي".</p>
-                <div class="quote-box">مثال: أيوب الصديق</div>
+
+                <div class="quote-box">
+                    مثال: أيوب الصديق
+                </div>
             </div>
+
             <div class="card">
                 <h3>تجارب للتوبة</h3>
                 <p>لتنبيه الإنسان البعيد ليعود إلى حضن الله.</p>
-                <div class="quote-box">مثال: الابن الضال</div>
+
+                <div class="quote-box">
+                    مثال: الابن الضال
+                </div>
             </div>
+
             <div class="card">
                 <h3>تجارب للوقاية</h3>
                 <p>لحماية المؤمن من الكبرياء الناتج عن النجاح أو المواهب.</p>
-                <div class="quote-box">مثال: شوكة بولس الرسول</div>
+
+                <div class="quote-box">
+                    مثال: شوكة بولس الرسول
+                </div>
             </div>
+
             <div class="card">
                 <h3>تجارب للتزكية</h3>
                 <p>لاختبار مدى أمانة المؤمن وتسليمه لله.</p>
-                <div class="quote-box">مثال: تجربة إبراهيم</div>
+
+                <div class="quote-box">
+                    مثال: تجربة إبراهيم
+                </div>
             </div>
+
         </div>
 
         <footer>
-            <p>مجموعة بولس الرسول </p>
+            <p>مجموعة بولس الرسول</p>
         </footer>
 
     </div>
 
+    <div id="overlay"></div>
+
+    <div class="popup" id="popup">
+
+        <h2>
+            الدروس والقائمة
+        </h2>
+
+        <a href="index.html">
+            الصفحة الرئيسية
+        </a>
+
+        <a href="الصليب.html">
+            الصليب
+        </a>
+
+        <a href="ابونا مخاءيل ابراهيم .html">
+            أبونا مخائيل إبراهيم
+        </a>
+
+        <a href="مقدمه رساله كولوسي .html">
+            مقدمة رسالة كولوسي
+        </a>
+
+        <a href="لماذا موت الصليب.html">
+            لماذا موت الصليب؟
+        </a>
+
+        <a href="سمارها و بياضها.html">
+            سمارها وبياضها
+        </a>
+
+        <a href="كولوسي 1, 2 .html">
+            كولوسي 1، 2
+        </a>
+
+        <a href="كلوسى 3.html">
+            كولوسي 3
+        </a>
+
+        <a href="كولوسى 4.html">
+            كولوسي 4
+        </a>
+
+        <a href="مقدمة عن كورنثوس.html">
+            مقدمة عن كورنثوس
+        </a>
+
+        <a href="kno4to.html">
+            كورنثوس الأصحاحات 1 و2 و3 و4
+        </a>
+
+        <a href="كورنثوس 5 6.html">
+            كورنثوس 5، 6
+        </a>
+
+        <a href="كورنثوس الأولي ٧ .html">
+            كورنثوس الأولى 7
+        </a>
+
+        <a href="كورنثوس ٨ .html">
+            كورنثوس 8
+        </a>
+
+        <a href="كورنثوس ١١ .html">
+            كورنثوس 11
+        </a>
+
+        <a href="كورنثوس الأولي ١٢ .html">
+            كورنثوس 12
+        </a>
+
+        <a href="كورنثوس 13. html">
+            كورنثوس 13
+        </a>
+
+        <a href="كورنثوس 14 .html">
+            كورنثوس 14
+        </a>
+
+        <a href="كورنثوس ١٦ .html">
+            كورنثوس 16
+        </a>
+
+        <a href="ادمان الميديا .html">
+            إدمان الميديا
+        </a>
+
+        <hr>
+
+        <a href="طقس القداس .html">
+            الطقس
+        </a>
+
+        <button id="closeBtn" type="button">
+            إغلاق
+        </button>
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const menuBtn = document.getElementById("menuBtn");
+            const popup = document.getElementById("popup");
+            const overlay = document.getElementById("overlay");
+            const closeBtn = document.getElementById("closeBtn");
+
+            function openMenu() {
+                popup.style.display = "block";
+                overlay.style.display = "block";
+                document.body.style.overflow = "hidden";
+            }
+
+            function closeMenu() {
+                popup.style.display = "none";
+                overlay.style.display = "none";
+                document.body.style.overflow = "";
+            }
+
+            menuBtn.addEventListener("click", function () {
+                openMenu();
+            });
+
+            closeBtn.addEventListener("click", function () {
+                closeMenu();
+            });
+
+            overlay.addEventListener("click", function () {
+                closeMenu();
+            });
+
+            document.addEventListener("keydown", function (event) {
+                if (event.key === "Escape") {
+                    closeMenu();
+                }
+            });
+
+        });
+    </script>
+
 </body>
+
 </html>
