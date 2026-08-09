@@ -4,7 +4,6 @@
 <head>
 
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>رسالة بولس الرسول لأهل كورنثوس - الأصحاحات 1 و2 و3 و4</title>
@@ -22,14 +21,12 @@
             --border: #e2e8f0;
         }
 
-
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
 
         body {
             background-color: var(--bg);
@@ -38,7 +35,6 @@
             padding: 20px;
         }
 
-
         /* =========================
            Navigation
         ========================= */
@@ -46,7 +42,6 @@
         nav {
             max-width: 1100px;
             margin: 0 auto 25px auto;
-
             padding: 15px 20px;
 
             background: linear-gradient(
@@ -56,7 +51,6 @@
             );
 
             color: white;
-
             border-radius: 14px;
 
             display: flex;
@@ -69,12 +63,10 @@
                 0 8px 20px rgba(0, 0, 0, 0.12);
         }
 
-
         nav h2 {
             color: #fbbf24;
             font-size: 1.5rem;
         }
-
 
         nav h3 {
             font-size: 1rem;
@@ -82,41 +74,35 @@
             opacity: 0.9;
         }
 
-
         #menuBtn {
             background-color: #fbbf24;
             color: #1e1b4b;
 
             border: none;
-
             border-radius: 10px;
 
             width: 45px;
             height: 45px;
 
             font-size: 1.5rem;
-
             cursor: pointer;
 
             transition: 0.2s;
         }
-
 
         #menuBtn:hover {
             transform: scale(1.08);
             background-color: #f59e0b;
         }
 
-
         /* =========================
-           Menu Overlay
+           Overlay
         ========================= */
 
         #overlay {
             display: none;
 
             position: fixed;
-
             inset: 0;
 
             background-color: rgba(0, 0, 0, 0.55);
@@ -124,6 +110,9 @@
             z-index: 999;
         }
 
+        #overlay.active {
+            display: block;
+        }
 
         /* =========================
            Popup Menu
@@ -140,7 +129,6 @@
             transform: translate(-50%, -50%);
 
             width: min(90%, 420px);
-
             max-height: 85vh;
 
             overflow-y: auto;
@@ -159,13 +147,14 @@
             text-align: center;
         }
 
+        .popup.active {
+            display: block;
+        }
 
         .popup h2 {
             color: var(--primary);
-
             margin-bottom: 20px;
         }
-
 
         .popup a {
             display: block;
@@ -189,15 +178,11 @@
             transition: 0.2s;
         }
 
-
         .popup a:hover {
             background-color: var(--primary);
-
             color: white;
-
             transform: translateY(-2px);
         }
-
 
         .popup hr {
             margin: 15px 0;
@@ -206,7 +191,6 @@
 
             border-top: 1px solid var(--border);
         }
-
 
         #closeBtn {
             margin-top: 15px;
@@ -228,11 +212,9 @@
             transition: 0.2s;
         }
 
-
         #closeBtn:hover {
             background-color: #b91c1c;
         }
-
 
         /* =========================
            Main Container
@@ -240,10 +222,8 @@
 
         .container {
             max-width: 1100px;
-
             margin: 0 auto;
         }
-
 
         /* =========================
            Header
@@ -271,7 +251,6 @@
                 0 10px 25px -5px rgba(0, 0, 0, 0.1);
         }
 
-
         header h1 {
             font-size: 2.2rem;
 
@@ -282,7 +261,6 @@
             line-height: 1.5;
         }
 
-
         header p {
             font-size: 1.1rem;
 
@@ -290,7 +268,6 @@
 
             margin-top: 8px;
         }
-
 
         /* =========================
            Section Titles
@@ -307,7 +284,6 @@
 
             border-bottom: 3px solid var(--secondary);
         }
-
 
         /* =========================
            Cards
@@ -327,7 +303,6 @@
             margin-bottom: 30px;
         }
 
-
         .card {
             background-color: var(--card-bg);
 
@@ -346,7 +321,6 @@
                 box-shadow 0.2s;
         }
 
-
         .card:hover {
             transform: translateY(-3px);
 
@@ -354,7 +328,6 @@
                 0 10px 15px -3px
                 rgba(0, 0, 0, 0.1);
         }
-
 
         .card h3 {
             color: var(--primary);
@@ -364,13 +337,11 @@
             font-size: 1.2rem;
         }
 
-
         .card p {
             color: var(--text-muted);
 
             font-size: 0.98rem;
         }
-
 
         /* =========================
            Table
@@ -392,7 +363,6 @@
                 rgba(0, 0, 0, 0.05);
         }
 
-
         table {
             width: 100%;
 
@@ -400,7 +370,6 @@
 
             text-align: right;
         }
-
 
         th,
         td {
@@ -411,7 +380,6 @@
             vertical-align: top;
         }
 
-
         th {
             background-color: #f1f5f9;
 
@@ -420,11 +388,9 @@
             font-weight: bold;
         }
 
-
         tr:last-child td {
             border-bottom: none;
         }
-
 
         /* =========================
            Quote Box
@@ -444,7 +410,6 @@
             color: #92400e;
         }
 
-
         /* =========================
            Footer
         ========================= */
@@ -463,7 +428,6 @@
             margin-top: 40px;
         }
 
-
         /* =========================
            Mobile
         ========================= */
@@ -474,67 +438,53 @@
                 padding: 12px;
             }
 
-
             nav {
                 padding: 12px 15px;
             }
-
 
             nav h2 {
                 font-size: 1.2rem;
             }
 
-
             nav h3 {
                 display: none;
             }
-
 
             #menuBtn {
                 width: 42px;
                 height: 42px;
             }
 
-
             header {
                 padding: 30px 15px;
             }
-
 
             header h1 {
                 font-size: 1.7rem;
             }
 
-
             header p {
                 font-size: 1rem;
             }
-
 
             .section-title {
                 font-size: 1.3rem;
             }
 
-
             .grid {
                 grid-template-columns: 1fr;
             }
-
 
             .card {
                 padding: 20px;
             }
 
-
             th,
             td {
                 padding: 12px;
-
                 font-size: 14px;
             }
-
         }
-
 
         @media (max-width: 450px) {
 
@@ -542,26 +492,26 @@
                 font-size: 1.5rem;
             }
 
-
             header p {
                 font-size: 0.9rem;
             }
-
 
             .section-title {
                 font-size: 1.2rem;
             }
 
-
             .card h3 {
                 font-size: 1.05rem;
             }
-
 
             .card p {
                 font-size: 0.9rem;
             }
 
+            .popup {
+                padding: 20px;
+                width: 92%;
+            }
         }
 
     </style>
@@ -570,7 +520,6 @@
 
 
 <body>
-
 
     <!-- =========================
          Navigation Bar
@@ -586,7 +535,7 @@
             فريق بولس الرسول مجموعة 2
         </h3>
 
-        <button id="menuBtn">
+        <button id="menuBtn" type="button">
             ☰
         </button>
 
@@ -598,9 +547,6 @@
     ========================= -->
 
     <div class="container">
-
-
-        <!-- Header -->
 
         <header>
 
@@ -621,20 +567,14 @@
         </header>
 
 
-        <!-- =========================
-             Chapter 1
-        ========================= -->
+        <!-- Chapter 1 -->
 
         <h2 class="section-title">
-
             الأصحاح الأول:
             الانقسامات وعظمة الصليب
-
         </h2>
 
-
         <div class="grid">
-
 
             <div class="card">
 
@@ -688,24 +628,17 @@
 
             </div>
 
-
         </div>
 
 
-        <!-- =========================
-             Chapter 2
-        ========================= -->
+        <!-- Chapter 2 -->
 
         <h2 class="section-title">
-
             الأصحاح الثاني:
             الكرازة بالروح القدس وحكمة الله
-
         </h2>
 
-
         <div class="grid">
-
 
             <div class="card">
 
@@ -757,24 +690,17 @@
 
             </div>
 
-
         </div>
 
 
-        <!-- =========================
-             Chapter 3
-        ========================= -->
+        <!-- Chapter 3 -->
 
         <h2 class="section-title">
-
             الأصحاح الثالث:
             النمو الروحي وبناء هيكل الله
-
         </h2>
 
-
         <div class="grid">
-
 
             <div class="card">
 
@@ -842,24 +768,17 @@
 
             </div>
 
-
         </div>
 
 
-        <!-- =========================
-             Chapter 4
-        ========================= -->
+        <!-- Chapter 4 -->
 
         <h2 class="section-title">
-
             الأصحاح الرابع:
             أمانة الخادم وتواضعه
-
         </h2>
 
-
         <div class="grid">
-
 
             <div class="card">
 
@@ -915,20 +834,14 @@
 
             </div>
 
-
         </div>
 
 
-        <!-- =========================
-             Summary Table
-        ========================= -->
+        <!-- Summary Table -->
 
         <h2 class="section-title">
-
             الفكرة المحورية للأصحاحات من 1 إلى 4
-
         </h2>
-
 
         <div class="table-container">
 
@@ -954,9 +867,7 @@
 
                 </thead>
 
-
                 <tbody>
-
 
                     <tr>
 
@@ -1038,7 +949,6 @@
 
                     </tr>
 
-
                 </tbody>
 
             </table>
@@ -1046,16 +956,11 @@
         </div>
 
 
-        <!-- =========================
-             Conclusion
-        ========================= -->
+        <!-- Conclusion -->
 
         <h2 class="section-title">
-
             الخلاصة
-
         </h2>
-
 
         <div class="quote-box">
 
@@ -1076,9 +981,7 @@
         </div>
 
 
-        <!-- =========================
-             Footer
-        ========================= -->
+        <!-- Footer -->
 
         <footer>
 
@@ -1092,20 +995,12 @@
 
         </footer>
 
-
     </div>
 
-
-    <!-- =========================
-         Menu Overlay
-    ========================= -->
 
     <div id="overlay"></div>
 
 
-    <!-- =========================
-         Popup Menu
-    ========================= -->
 
     <div class="popup" id="popup">
 
@@ -1113,111 +1008,89 @@
             الدروس والقائمة
         </h2>
 
-
         <a href="الصليب.html">
             الصليب
         </a>
-
 
         <a href="ابونا مخاءيل ابراهيم .html">
             أبونا مخائيل إبراهيم
         </a>
 
-
         <a href="مقدمه رساله كولوسي .html">
             مقدمة رسالة كولوسي
         </a>
-
 
         <a href="لماذا موت الصليب.html">
             لماذا موت الصليب؟
         </a>
 
-
         <a href="سمارها و بياضها.html">
             سمارها وبياضها
         </a>
-
 
         <a href="كولوسي 1, 2 .html">
             كولوسي 1، 2
         </a>
 
-
         <a href="كلوسى 3.html">
             كولوسي 3
         </a>
-
 
         <a href="كولوسى 4.html">
             كولوسي 4
         </a>
 
-
         <a href="مقدمة عن كورنثوس.html">
             مقدمة عن كورنثوس
         </a>
 
-
         <a href="kno4to.html">
-            كرنثوس الأصحاح 1 و2 و3 و4
+            كورنثوس الأصحاح 1 و2 و3 و4
         </a>
-
 
         <a href="كورنثوس 5 6.html">
             كورنثوس 5، 6
         </a>
 
-
         <a href="كورنثوس الأولي ٧ .html">
             كورنثوس الأولى 7
         </a>
-
 
         <a href="كورنثوس ٨ .html">
             كورنثوس 8
         </a>
 
-
         <a href="كورنثوس ١١ .html">
             كورنثوس 11
         </a>
-
 
         <a href="كورنثوس الأولي ١٢ .html">
             كورنثوس 12
         </a>
 
-
         <a href="كورنثوس 13. html">
             كورنثوس 13
         </a>
-
 
         <a href="كورنثوس 14 .html">
             كورنثوس 14
         </a>
 
-
         <a href="كورنثوس ١٦ .html">
             كورنثوس 16
         </a>
-
 
         <a href="ادمان الميديا .html">
             إدمان الميديا
         </a>
 
-
         <hr>
-
 
         <a href="طقس القداس .html">
             الطقس
         </a>
 
-
-        <button id="closeBtn">
+        <button id="closeBtn" type="button">
             إغلاق
         </button>
 
@@ -1225,8 +1098,50 @@
 
 
 
-    <script src="script.js"></script>
+    <script>
 
+        const menuBtn = document.getElementById("menuBtn");
+        const popup = document.getElementById("popup");
+        const overlay = document.getElementById("overlay");
+        const closeBtn = document.getElementById("closeBtn");
+
+
+        menuBtn.addEventListener("click", function () {
+
+            popup.classList.add("active");
+            overlay.classList.add("active");
+
+        });
+
+
+        closeBtn.addEventListener("click", function () {
+
+            popup.classList.remove("active");
+            overlay.classList.remove("active");
+
+        });
+
+
+        overlay.addEventListener("click", function () {
+
+            popup.classList.remove("active");
+            overlay.classList.remove("active");
+
+        });
+
+
+        document.addEventListener("keydown", function (event) {
+
+            if (event.key === "Escape") {
+
+                popup.classList.remove("active");
+                overlay.classList.remove("active");
+
+            }
+
+        });
+
+    </script>
 
 </body>
 
