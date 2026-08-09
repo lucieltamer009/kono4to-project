@@ -22,12 +22,14 @@
             --border: #e2e8f0;
         }
 
+
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+
 
         body {
             background-color: var(--bg);
@@ -36,9 +38,10 @@
             padding: 20px;
         }
 
+
         /* =========================
            NAVBAR
-        ========================== */
+        ========================= */
 
         nav {
             max-width: 1100px;
@@ -64,10 +67,12 @@
                 0 8px 20px rgba(0, 0, 0, 0.12);
         }
 
+
         nav h2 {
             color: #fbbf24;
             font-size: 1.5rem;
         }
+
 
         nav h3 {
             font-size: 1rem;
@@ -76,8 +81,10 @@
             text-align: center;
         }
 
+
         #menuBtn {
             border: none;
+
             background: #fbbf24;
             color: #1e1b4b;
 
@@ -87,19 +94,22 @@
             border-radius: 10px;
 
             font-size: 1.5rem;
+
             cursor: pointer;
 
             transition: 0.3s;
         }
+
 
         #menuBtn:hover {
             transform: scale(1.05);
             background: #f59e0b;
         }
 
+
         /* =========================
            OVERLAY
-        ========================== */
+        ========================= */
 
         #overlay {
             display: none;
@@ -113,21 +123,24 @@
             z-index: 1998;
         }
 
+
         /* =========================
-           POPUP MENU
-        ========================== */
+           POPUP MENU - في النص
+        ========================= */
 
         .popup {
             display: none;
 
             position: fixed;
 
-            top: 0;
-            right: 0;
+            top: 50%;
+            left: 50%;
 
-            width: min(380px, 90%);
+            transform: translate(-50%, -50%);
 
-            height: 100vh;
+            width: min(500px, 90%);
+
+            max-height: 85vh;
 
             background: white;
 
@@ -135,25 +148,39 @@
 
             padding: 25px;
 
+            border-radius: 18px;
+
             overflow-y: auto;
 
             box-shadow:
-                -8px 0 25px rgba(0, 0, 0, 0.2);
+                0 20px 50px rgba(0, 0, 0, 0.25);
 
-            animation: slideIn 0.25s ease;
+            text-align: center;
+
+            animation: popupShow 0.25s ease;
         }
 
-        @keyframes slideIn {
+
+        @keyframes popupShow {
 
             from {
-                transform: translateX(100%);
+                opacity: 0;
+
+                transform:
+                    translate(-50%, -45%)
+                    scale(0.95);
             }
 
             to {
-                transform: translateX(0);
+                opacity: 1;
+
+                transform:
+                    translate(-50%, -50%)
+                    scale(1);
             }
 
         }
+
 
         .popup h2 {
             color: var(--primary);
@@ -166,35 +193,38 @@
                 3px solid var(--secondary);
         }
 
+
         .popup a {
             display: block;
 
             text-decoration: none;
 
-            color: var(--text-main);
+            color: var(--primary);
 
-            background: #f8fafc;
+            background: #eff6ff;
 
-            padding: 12px 15px;
+            border: 1px solid #bfdbfe;
 
-            margin-bottom: 8px;
+            padding: 11px;
 
-            border-radius: 8px;
+            margin: 8px 0;
 
-            border: 1px solid var(--border);
+            border-radius: 10px;
+
+            font-weight: bold;
 
             transition: 0.2s;
         }
 
+
         .popup a:hover {
-            background: #eff6ff;
+            background: var(--primary);
 
-            color: var(--primary);
-
-            border-color: #bfdbfe;
+            color: white;
 
             transform: translateX(-3px);
         }
+
 
         .popup hr {
             border: none;
@@ -202,45 +232,48 @@
             border-top:
                 1px solid var(--border);
 
-            margin: 20px 0;
+            margin: 18px 0;
         }
 
+
         #closeBtn {
-            width: 100%;
+            margin-top: 15px;
+
+            padding: 10px 25px;
 
             border: none;
 
-            background: var(--primary);
+            border-radius: 10px;
+
+            background: #dc2626;
 
             color: white;
-
-            padding: 12px;
-
-            border-radius: 8px;
 
             font-size: 1rem;
 
             cursor: pointer;
-
-            margin-top: 10px;
         }
+
 
         #closeBtn:hover {
-            background: #172554;
+            background: #b91c1c;
         }
+
 
         /* =========================
            MAIN CONTAINER
-        ========================== */
+        ========================= */
 
         .container {
             max-width: 1100px;
+
             margin: 0 auto;
         }
 
+
         /* =========================
            HEADER
-        ========================== */
+        ========================= */
 
         header {
             text-align: center;
@@ -265,6 +298,7 @@
                 rgba(0, 0, 0, 0.1);
         }
 
+
         header h1 {
             font-size: 2.2rem;
 
@@ -273,15 +307,17 @@
             color: #fbbf24;
         }
 
+
         header p {
             font-size: 1.1rem;
 
             opacity: 0.9;
         }
 
+
         /* =========================
            SECTION TITLE
-        ========================== */
+        ========================= */
 
         .section-title {
             display: flex;
@@ -302,9 +338,10 @@
                 3px solid var(--secondary);
         }
 
+
         /* =========================
            GRID
-        ========================== */
+        ========================= */
 
         .grid {
             display: grid;
@@ -320,9 +357,10 @@
             margin-bottom: 30px;
         }
 
+
         /* =========================
            CARDS
-        ========================== */
+        ========================= */
 
         .card {
             background: var(--card-bg);
@@ -343,6 +381,7 @@
                 box-shadow 0.2s;
         }
 
+
         .card:hover {
             transform: translateY(-3px);
 
@@ -350,6 +389,7 @@
                 0 10px 15px -3px
                 rgba(0, 0, 0, 0.1);
         }
+
 
         .card h3 {
             color: var(--primary);
@@ -359,15 +399,17 @@
             font-size: 1.2rem;
         }
 
+
         .card p {
             color: var(--text-muted);
 
             font-size: 0.95rem;
         }
 
+
         /* =========================
            BADGES
-        ========================== */
+        ========================= */
 
         .badge-container {
             display: flex;
@@ -378,6 +420,7 @@
 
             margin-top: 10px;
         }
+
 
         .badge {
             background-color: #eff6ff;
@@ -396,9 +439,10 @@
                 1px solid #bfdbfe;
         }
 
+
         /* =========================
            TABLE
-        ========================== */
+        ========================= */
 
         .table-container {
             overflow-x: auto;
@@ -417,6 +461,7 @@
                 rgba(0, 0, 0, 0.05);
         }
 
+
         table {
             width: 100%;
 
@@ -425,13 +470,17 @@
             text-align: right;
         }
 
+
         th,
         td {
             padding: 16px;
 
             border-bottom:
                 1px solid var(--border);
+
+            vertical-align: top;
         }
+
 
         th {
             background-color: #f1f5f9;
@@ -441,13 +490,15 @@
             font-weight: bold;
         }
 
+
         tr:last-child td {
             border-bottom: none;
         }
 
+
         /* =========================
            QUOTE
-        ========================== */
+        ========================= */
 
         .quote-box {
             background: #fffbeb;
@@ -466,9 +517,10 @@
             color: #92400e;
         }
 
+
         /* =========================
            FOOTER
-        ========================== */
+        ========================= */
 
         footer {
             text-align: center;
@@ -485,9 +537,10 @@
             margin-top: 40px;
         }
 
+
         /* =========================
            MOBILE
-        ========================== */
+        ========================= */
 
         @media (max-width: 700px) {
 
@@ -495,46 +548,57 @@
                 padding: 12px;
             }
 
+
             nav {
                 padding: 12px 15px;
             }
+
 
             nav h2 {
                 font-size: 1.2rem;
             }
 
+
             nav h3 {
                 font-size: 0.8rem;
             }
+
 
             #menuBtn {
                 width: 40px;
                 height: 40px;
             }
 
+
             header {
                 padding: 30px 15px;
             }
+
 
             header h1 {
                 font-size: 1.7rem;
             }
 
+
             header p {
                 font-size: 1rem;
             }
+
 
             .section-title {
                 font-size: 1.3rem;
             }
 
+
             .grid {
                 grid-template-columns: 1fr;
             }
 
+
             .card {
                 padding: 20px;
             }
+
 
             th,
             td {
@@ -542,7 +606,9 @@
 
                 font-size: 14px;
             }
+
         }
+
 
         @media (max-width: 450px) {
 
@@ -550,42 +616,55 @@
                 display: none;
             }
 
+
             header h1 {
                 font-size: 1.5rem;
             }
+
 
             header p {
                 font-size: 0.9rem;
             }
 
+
             .section-title {
                 font-size: 1.2rem;
             }
+
 
             .card h3 {
                 font-size: 1.05rem;
             }
 
+
             .card p {
                 font-size: 0.9rem;
             }
 
+
             .popup {
+                width: 92%;
+
+                max-height: 85vh;
+
                 padding: 20px;
 
-                width: 92%;
+                border-radius: 16px;
             }
+
         }
 
     </style>
 
 </head>
 
+
 <body>
+
 
     <!-- =========================
          NAVBAR
-    ========================== -->
+    ========================= -->
 
     <nav>
 
@@ -606,9 +685,10 @@
 
     <!-- =========================
          MAIN CONTENT
-    ========================== -->
+    ========================= -->
 
     <div class="container">
+
 
         <header>
 
@@ -623,7 +703,9 @@
         </header>
 
 
-        <!-- Section 1 -->
+        <!-- =========================
+             Section 1
+        ========================= -->
 
         <h2 class="section-title">
 
@@ -635,6 +717,7 @@
 
 
         <div class="grid">
+
 
             <div class="card">
 
@@ -692,6 +775,7 @@
                     تجنباً لإعثار أصحاب الضمائر الضعيفة.
                 </p>
 
+
                 <div class="badge-container">
 
                     <span class="badge">
@@ -713,7 +797,9 @@
         </div>
 
 
-        <!-- Section 2 -->
+        <!-- =========================
+             Section 2
+        ========================= -->
 
         <h2 class="section-title">
 
@@ -802,7 +888,9 @@
         </div>
 
 
-        <!-- Section 3 -->
+        <!-- =========================
+             Section 3
+        ========================= -->
 
         <h2 class="section-title">
 
@@ -859,14 +947,14 @@
 
     <!-- =========================
          OVERLAY
-    ========================== -->
+    ========================= -->
 
     <div id="overlay"></div>
 
 
     <!-- =========================
          POPUP MENU
-    ========================== -->
+    ========================= -->
 
     <div class="popup" id="popup">
 
@@ -992,7 +1080,7 @@
 
     <!-- =========================
          JAVASCRIPT
-    ========================== -->
+    ========================= -->
 
     <script>
 
@@ -1051,7 +1139,7 @@
                 );
 
 
-                /* الضغط على الـ Overlay */
+                /* الضغط على الخلفية */
 
                 overlay.addEventListener(
                     "click",
@@ -1075,7 +1163,7 @@
                 );
 
 
-                /* إغلاق القائمة عند اختيار درس */
+                /* إغلاق القائمة بعد اختيار درس */
 
                 const menuLinks =
                     popup.querySelectorAll("a");
@@ -1093,9 +1181,11 @@
                 );
 
             }
+
         );
 
     </script>
+
 
 </body>
 
