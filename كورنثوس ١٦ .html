@@ -1,9 +1,9 @@
-DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>يعظم انتصارنا بالذي أحبنا - الأصحاح السادس عشر</title>
+    <title>كورنثوس - الأصحاح السادس عشر</title>
     <style>
         :root {
             --primary: #1e3a8a;
@@ -99,13 +99,60 @@ DOCTYPE html>
             font-size: 0.95rem;
         }
 
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .badge {
+            background-color: #eff6ff;
+            color: var(--primary-light);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            border: 1px solid #bfdbfe;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            background: var(--card-bg);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: right;
+        }
+
+        th,
+        td {
+            padding: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            background-color: #f1f5f9;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
         .quote-box {
             background: #fffbebfb;
             border-right: 4px solid var(--secondary);
             padding: 16px;
             border-radius: 8px;
             margin-top: 10px;
-            margin-bottom: 30px;
             font-style: italic;
             color: #92400e;
         }
@@ -123,48 +170,139 @@ DOCTYPE html>
 <body>
 
     <div class="container">
-        
-        <!-- Header Section -->
+
         <header>
-            <h1>يعظم انتصارنا بالذي أحبنا</h1> 
-        <p> لرسالة كورنثوس الأولى (الأصحاح السادس عشر)</p>
+            <h1>يعظم انتصارنا بالذي أحبنا</h1>
+            <p>رسالة كورنثوس الأولى - الأصحاح السادس عشر</p>
         </header>
 
-        <!-- Main Section: Chapter 16 -->
         <h2 class="section-title">
-            <span>📜</span> الأصحاح السادس عشر: الجمع لأجل القديسين والوصايا الختامية
+            <span>📖</span> محاور الأصحاح الأساسية
         </h2>
 
         <div class="grid">
             <div class="card">
                 <h3>العطاء والعناية بالمحتاجين</h3>
-                <p>يوصي بولس بالجمع النظامي والمستمر لأجل فقراء الكنيسة في كل أول أسبوع، بنسبة ما يسر الرب، لإرسال التبرعات بأمانة.</p>
+                <p>
+                    يوصي بولس المؤمنين بالجمع النظامي والمستمر لأجل فقراء الكنيسة،
+                    وأن يكون العطاء بحسب ما يسر الرب، بروح المحبة والمسؤولية.
+                </p>
+                <div class="badge-container">
+                    <span class="badge">العطاء</span>
+                    <span class="badge">المحبة</span>
+                    <span class="badge">خدمة المحتاجين</span>
+                </div>
             </div>
-            
+
             <div class="card">
                 <h3>الخطط السفرية والخدمة</h3>
-                <p>يشارك بولس خططه لزيارتهم بعد المرور بمكدونية، مشيراً إلى بقائه في أفسس لوجود «باب عظيم فعال» مع كثرة المعاندين.</p>
+                <p>
+                    يشارك بولس أهل كورنثوس خططه لزيارتهم بعد المرور بمكدونية،
+                    ويذكر بقاءه في أفسس بسبب وجود باب عظيم وفعال للخدمة،
+                    مع وجود معاندين كثيرين.
+                </p>
+                <div class="badge-container">
+                    <span class="badge">الخدمة</span>
+                    <span class="badge">الكرازة</span>
+                    <span class="badge">الأمانة</span>
+                </div>
             </div>
-            
+
             <div class="card">
-                <h3>التوصيات بالخدام والتوقير</h3>
-                <p>يحثهم على استقبال تيموثاوس باحترام وتشجيعه، ويطلب الخضوع والاحترام لخدام المحبة كبيت استفاناس الذين رتبوا أنفسهم لخدمة القديسين.</p>
+                <h3>التوصية بالخدام واحترامهم</h3>
+                <p>
+                    يطلب بولس من المؤمنين استقبال تيموثاوس باحترام وتشجيعه،
+                    كما يوصي بتقدير بيت استفاناس وكل من يخدمون القديسين
+                    بمحبة وأمانة.
+                </p>
             </div>
-            
+
             <div class="card">
-                <h3>الوصايا الروحية والتحية</h3>
-                <p>يقدم بولس نصائحه الشهيرة للثبات والعمل بسلام ومحبة، ويختم الرسالة بسلامه الشخصي وبركته للجميع.</p>
-                <div class="quote-box">«اسْهَرُوا. اثْبُتُوا فِي الإِيمَانِ. كُونُوا رِجَالاً. تَقَوَّوْا. لِتَصِرْ كُلُّ أُمُورِكُمْ فِي مَحَبَّةٍ»</div>
+                <h3>الثبات والمحبة في الحياة الروحية</h3>
+                <p>
+                    يقدم بولس وصايا روحية واضحة للثبات في الإيمان والقوة
+                    والسهر، مؤكداً أن كل ما يفعله المؤمن يجب أن يكون في محبة.
+                </p>
+                <div class="quote-box">
+                    «اسْهَرُوا. اثْبُتُوا فِي الإِيمَانِ. كُونُوا رِجَالاً.
+                    تَقَوَّوْا. لِتَصِرْ كُلُّ أُمُورِكُمْ فِي مَحَبَّةٍ»
+                </div>
             </div>
         </div>
 
-        <!-- Summary Quote Box -->
-        <div class="quote-box" style="font-style: normal;">
-            <strong>خلاصة الأصحاح السادس عشر:</strong> يربط الأصحاح الختامي التطبيق العملي للإيمان (كالعطاء والنظام) بالروحية العالية، مؤكداً على السهر، الثبات، والخدمة المتبادلة في محبة المسيح.
+        <h2 class="section-title">
+            <span>📜</span> آيات محورية والشرح
+        </h2>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>الآية الكريمة</th>
+                        <th>المعنى والتطبيق الروحي</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong>
+                                «اسْهَرُوا. اثْبُتُوا فِي الإِيمَانِ.
+                                كُونُوا رِجَالاً. تَقَوَّوْا.»
+                            </strong>
+                            <br>
+                            <small>(1 كو 16: 13)</small>
+                        </td>
+                        <td>
+                            دعوة للسهر الروحي والثبات في الإيمان وعدم التهاون
+                            أمام التجارب، مع طلب القوة من الله للاستمرار في طريقه.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>
+                                «لِتَصِرْ كُلُّ أُمُورِكُمْ فِي مَحَبَّةٍ.»
+                            </strong>
+                            <br>
+                            <small>(1 كو 16: 14)</small>
+                        </td>
+                        <td>
+                            المحبة هي الأساس الذي يجب أن يحكم كل تصرفات المؤمن،
+                            سواء في الخدمة أو العطاء أو التعامل مع الآخرين.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>
+                                «وَكُلُّ مَنْ يَعْمَلُ مَعَهُمْ وَيَتْعَبُ
+                                فَاقْبَلُوهُ.»
+                            </strong>
+                            <br>
+                            <small>(1 كو 16: 16)</small>
+                        </td>
+                        <td>
+                            تشجيع على تقدير خدام الله واحترام تعبهم وخدمتهم،
+                            والتعاون معهم بروح المحبة والخضوع المتبادل.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="section-title">
+            <span>📌</span> الخلاصة الروحية
+        </h2>
+
+        <div class="quote-box" style="text-align: center; font-size: 1.15rem; font-style: normal; padding: 24px;">
+            <strong>الخلاصة:</strong>
+            يختم بولس رسالته بدعوة عملية للحياة مع المسيح، تجمع بين العطاء
+            والخدمة والثبات في الإيمان واحترام خدام الله، وتضع المحبة أساساً
+            لكل ما يفعله المؤمن.
         </div>
 
         <footer>
-            <p>تم تجهيز الصفحة للعرض على الموقع المباشر داخل VS Code | جاهزة للتعديل والتصميم</p>
+            <p>دراسة الكتاب المقدس | رسالة بولس الأولى إلى أهل كورنثوس - الأصحاح السادس عشر</p>
         </footer>
 
     </div>
