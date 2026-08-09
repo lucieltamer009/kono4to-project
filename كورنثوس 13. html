@@ -2,12 +2,14 @@
 <html lang="ar" dir="rtl">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>ملخص أصحاح المحبة - 1 كورنثوس 13</title>
 
     <style>
+
         :root {
             --primary: #1e3a8a;
             --primary-light: #3b82f6;
@@ -34,25 +36,31 @@
         }
 
         /* =========================
-           NAVBAR
-        ========================== */
+           Navigation Bar
+        ========================= */
 
         nav {
             max-width: 1100px;
             margin: 0 auto 25px auto;
             padding: 15px 25px;
+
             background: linear-gradient(
                 135deg,
                 #1e3a8a 0%,
                 #1e1b4b 100%
             );
+
             color: white;
             border-radius: 14px;
+
             display: flex;
             align-items: center;
             justify-content: space-between;
+
             gap: 20px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+
+            box-shadow:
+                0 8px 20px rgba(0, 0, 0, 0.12);
         }
 
         nav h2 {
@@ -71,11 +79,15 @@
             border: none;
             background: #fbbf24;
             color: #1e1b4b;
+
             width: 45px;
             height: 45px;
+
             border-radius: 10px;
+
             font-size: 1.5rem;
             cursor: pointer;
+
             transition: 0.3s;
         }
 
@@ -85,36 +97,44 @@
         }
 
         /* =========================
-           OVERLAY
-        ========================== */
+           Overlay
+        ========================= */
 
         #overlay {
             position: fixed;
+
             top: 0;
             right: 0;
             bottom: 0;
             left: 0;
+
             background: rgba(0, 0, 0, 0.55);
+
             display: none;
+
             z-index: 999;
         }
 
         /* =========================
-           POPUP MENU
-        ========================== */
+           Popup Menu
+        ========================= */
 
         .popup {
             position: fixed;
+
             top: 50%;
             left: 50%;
+
             transform: translate(-50%, -50%);
 
             width: min(90%, 500px);
+
             max-height: 85vh;
 
             overflow-y: auto;
 
             background: white;
+
             padding: 25px;
 
             border-radius: 18px;
@@ -131,13 +151,18 @@
 
         .popup h2 {
             color: var(--primary);
+
             margin-bottom: 20px;
+
             padding-bottom: 10px;
-            border-bottom: 3px solid var(--secondary);
+
+            border-bottom:
+                3px solid var(--secondary);
         }
 
         .popup a {
             display: block;
+
             text-decoration: none;
 
             color: var(--primary);
@@ -159,13 +184,18 @@
 
         .popup a:hover {
             background: var(--primary);
+
             color: white;
+
             transform: translateX(-3px);
         }
 
         .popup hr {
             border: none;
-            border-top: 1px solid var(--border);
+
+            border-top:
+                1px solid var(--border);
+
             margin: 18px 0;
         }
 
@@ -185,8 +215,6 @@
             font-size: 1rem;
 
             cursor: pointer;
-
-            transition: 0.2s;
         }
 
         #closeBtn:hover {
@@ -194,8 +222,8 @@
         }
 
         /* =========================
-           MAIN CONTAINER
-        ========================== */
+           Main Container
+        ========================= */
 
         .container {
             max-width: 1100px;
@@ -203,19 +231,20 @@
         }
 
         /* =========================
-           HEADER
-        ========================== */
+           Header
+        ========================= */
 
         header {
             text-align: center;
 
             padding: 40px 20px;
 
-            background: linear-gradient(
-                135deg,
-                #1e3a8a 0%,
-                #1e1b4b 100%
-            );
+            background:
+                linear-gradient(
+                    135deg,
+                    #1e3a8a 0%,
+                    #1e1b4b 100%
+                );
 
             color: white;
 
@@ -224,23 +253,27 @@
             margin-bottom: 30px;
 
             box-shadow:
-                0 10px 25px -5px rgba(0, 0, 0, 0.1);
+                0 10px 25px -5px
+                rgba(0, 0, 0, 0.1);
         }
 
         header h1 {
             font-size: 2.2rem;
+
             margin-bottom: 10px;
+
             color: #fbbf24;
         }
 
         header p {
             font-size: 1.1rem;
+
             opacity: 0.9;
         }
 
         /* =========================
-           SECTION TITLES
-        ========================== */
+           Section Titles
+        ========================= */
 
         .section-title {
             display: flex;
@@ -257,12 +290,13 @@
 
             padding-bottom: 8px;
 
-            border-bottom: 3px solid var(--secondary);
+            border-bottom:
+                3px solid var(--secondary);
         }
 
         /* =========================
-           GRID
-        ========================== */
+           Grid
+        ========================= */
 
         .grid {
             display: grid;
@@ -279,8 +313,8 @@
         }
 
         /* =========================
-           CARDS
-        ========================== */
+           Cards
+        ========================= */
 
         .card {
             background: var(--card-bg);
@@ -289,7 +323,8 @@
 
             padding: 24px;
 
-            border: 1px solid var(--border);
+            border:
+                1px solid var(--border);
 
             box-shadow:
                 0 4px 6px -1px
@@ -323,8 +358,8 @@
         }
 
         /* =========================
-           BADGES
-        ========================== */
+           Badges
+        ========================= */
 
         .badge-container {
             display: flex;
@@ -349,12 +384,13 @@
 
             font-weight: bold;
 
-            border: 1px solid #bfdbfe;
+            border:
+                1px solid #bfdbfe;
         }
 
         /* =========================
-           TABLE
-        ========================== */
+           Table
+        ========================= */
 
         .table-container {
             overflow-x: auto;
@@ -363,7 +399,8 @@
 
             border-radius: 12px;
 
-            border: 1px solid var(--border);
+            border:
+                1px solid var(--border);
 
             margin-bottom: 30px;
 
@@ -384,9 +421,8 @@
         td {
             padding: 16px;
 
-            border-bottom: 1px solid var(--border);
-
-            vertical-align: top;
+            border-bottom:
+                1px solid var(--border);
         }
 
         th {
@@ -402,13 +438,14 @@
         }
 
         /* =========================
-           QUOTE
-        ========================== */
+           Quote Box
+        ========================= */
 
         .quote-box {
             background: #fffbeb;
 
-            border-right: 4px solid var(--secondary);
+            border-right:
+                4px solid var(--secondary);
 
             padding: 16px;
 
@@ -422,8 +459,8 @@
         }
 
         /* =========================
-           FOOTER
-        ========================== */
+           Footer
+        ========================= */
 
         footer {
             text-align: center;
@@ -434,14 +471,15 @@
 
             font-size: 0.9rem;
 
-            border-top: 1px solid var(--border);
+            border-top:
+                1px solid var(--border);
 
             margin-top: 40px;
         }
 
         /* =========================
-           MOBILE
-        ========================== */
+           Mobile
+        ========================= */
 
         @media (max-width: 700px) {
 
@@ -464,7 +502,6 @@
             #menuBtn {
                 width: 40px;
                 height: 40px;
-                font-size: 1.3rem;
             }
 
             header {
@@ -488,19 +525,6 @@
             }
 
             .card {
-                padding: 20px;
-            }
-
-            th,
-            td {
-                padding: 12px;
-
-                font-size: 14px;
-            }
-
-            .popup {
-                width: 92%;
-                max-height: 88vh;
                 padding: 20px;
             }
         }
@@ -530,15 +554,30 @@
             .card p {
                 font-size: 0.9rem;
             }
+
+            .popup {
+                padding: 20px;
+
+                width: 92%;
+            }
+
+            th,
+            td {
+                padding: 12px;
+
+                font-size: 0.9rem;
+            }
         }
+
     </style>
+
 </head>
 
 <body>
 
     <!-- =========================
-         NAVBAR
-    ========================== -->
+         Navigation Bar
+    ========================= -->
 
     <nav>
 
@@ -550,11 +589,7 @@
             فريق بولس الرسول مجموعة 2
         </h3>
 
-        <button
-            id="menuBtn"
-            type="button"
-            aria-label="فتح القائمة"
-        >
+        <button id="menuBtn" type="button">
             ☰
         </button>
 
@@ -562,12 +597,12 @@
 
 
     <!-- =========================
-         MAIN CONTENT
-    ========================== -->
+         Main Content
+    ========================= -->
 
     <div class="container">
 
-        <!-- Header -->
+        <!-- Header Section -->
 
         <header>
 
@@ -576,24 +611,19 @@
             </h1>
 
             <p>
-                نشيد المحبة:
-                «الطَّرِيقُ الأَفْضَلُ»
-                والموهبة العظمى في الحياة المسيحية
+                نشيد المحبة: «الطَّرِيقُ الأَفْضَلُ» والموهبة العظمى في الحياة المسيحية
             </p>
 
         </header>
 
 
-        <!-- =========================
-             SECTION 1
-        ========================== -->
+        <!-- Section 1 -->
 
         <h2 class="section-title">
 
             <span>❤️</span>
 
-            أولوية المحبة وأهميتها
-            (الأعداد 1-3)
+            أولوية المحبة وأهميتها (الأعداد 1-3)
 
         </h2>
 
@@ -607,8 +637,7 @@
                 </h3>
 
                 <p>
-                    التكلم بكافة اللغات أو ألسنة الملائكة
-                    بدون محبة يجعل الإنسان كأنه
+                    التكلم بكافة اللغات أو ألسنة الملائكة بدون محبة يجعل الإنسان كأنه
                     «نُحَاسٌ يَطْنُّ أَوْ صَنْجٌ يَرِنُّ»
                     (صوت بلا روح أو فائدة).
                 </p>
@@ -623,11 +652,8 @@
                 </h3>
 
                 <p>
-                    امتلاك موهبة النبوة،
-                    وفهم جميع الأسرار،
-                    والعلم الكامل،
-                    وحتى الإيمان القادر على نقل الجبال؛
-                    بدون محبة يُعتبر صاحبه
+                    امتلاك موهبة النبوة، وفهم جميع الأسرار، والعلم الكامل،
+                    وحتى الإيمان القادر على نقل الجبال؛ بدون محبة يُعتبر صاحبه
                     «لاَ شَيْءَ».
                 </p>
 
@@ -641,10 +667,8 @@
                 </h3>
 
                 <p>
-                    إطعام المساكين بكل الأموال
-                    وتسليم الجسد للاحتراق
-                    بذاتية ودون محبة حقيقية،
-                    لا ينفع الإنسان شيئاً على الإطلاق.
+                    إطعام المساكين بكل الأموال وتسليم الجسد للاحتراق
+                    بذاتية ودون محبة حقيقية، لا ينفع الإنسان شيئاً على الإطلاق.
                 </p>
 
             </div>
@@ -663,7 +687,7 @@
                     </span>
 
                     <span class="badge">
-                        الدافع أقوى من العمل
+                        الدافع أركز من العمل
                     </span>
 
                     <span class="badge">
@@ -677,16 +701,13 @@
         </div>
 
 
-        <!-- =========================
-             SECTION 2
-        ========================== -->
+        <!-- Section 2 -->
 
         <h2 class="section-title">
 
             <span>✨</span>
 
-            صفات المحبة الحقيقية
-            (الأعداد 4-7)
+            صفات المحبة الحقيقية (الأعداد 4-7)
 
         </h2>
 
@@ -700,13 +721,11 @@
                     <tr>
 
                         <th>
-                            صفات إيجابية
-                            (ما تفعله المحبة)
+                            صفات إيجابية (ما تفعله المحبة)
                         </th>
 
                         <th>
-                            صفات سلبية
-                            (ما تبتعد عنه المحبة)
+                            صفات سلبية (ما تبتعد عنه المحبة)
                         </th>
 
                     </tr>
@@ -731,8 +750,7 @@
                                 لا تحسد:
                             </strong>
 
-                            لا تغار من مواهب
-                            أو نجاح الآخرين.
+                            لا تغار من مواهب أو نجاح الآخرين.
                         </td>
 
                     </tr>
@@ -763,8 +781,7 @@
 
                         <td>
                             <strong>
-                                تحتمل كل شيء
-                                وتصدق كل شيء:
+                                تحتمل كل شيء وتصدق كل شيء:
                             </strong>
 
                             تلتمس الأعذار للآخرين.
@@ -785,8 +802,7 @@
 
                         <td>
                             <strong>
-                                ترجو كل شيء
-                                وتصبر على كل شيء:
+                                ترجو كل شيء وتصبر على كل شيء:
                             </strong>
 
                             تمتلك رجاءً ثابتاً لا ينقطع.
@@ -797,8 +813,7 @@
                                 لا تحتد ولا تحسب الشر:
                             </strong>
 
-                            لا تتغضب بسرعة
-                            ولا تحفظ الإساءة.
+                            لا تتغضب بسرعة ولا تحفظ الإساءة.
                         </td>
 
                     </tr>
@@ -810,16 +825,13 @@
         </div>
 
 
-        <!-- =========================
-             SECTION 3
-        ========================== -->
+        <!-- Section 3 -->
 
         <h2 class="section-title">
 
             <span>♾️</span>
 
-            خلود المحبة وعدم زوالها
-            (الأعداد 8-12)
+            خلود المحبة وعدم زوالها (الأعداد 8-12)
 
         </h2>
 
@@ -833,11 +845,8 @@
                 </h3>
 
                 <p>
-                    النبوات ستُبطل،
-                    الألسنة ستنتهي،
-                    والمعرفة البشرية ستتوقف؛
-                    لأنها وسائط زمنية ومؤقتة
-                    تخدمنا في هذا العالم فقط.
+                    النبوات ستُبطل، الألسنة ستنتهي، والمعرفة البشرية ستتوقف؛
+                    لأنها وسائط زمنية ومؤقتة تخدمنا في هذا العالم فقط.
                 </p>
 
             </div>
@@ -852,8 +861,7 @@
                 <p>
                     نحن الآن نعرف ونتنبأ بالجزء
                     («مِثْلَمَا فِي مِرْآةٍ، فِي لُغْزٍ»)،
-                    ولكن متى جاء الكامل،
-                    يُبطل ما هو جزئي
+                    ولكن متى جاء الكامل (الأبدية)، يُبطل ما هو جزئي
                     ونرى «وَجْهاً لِوَجْهٍ».
                 </p>
 
@@ -867,11 +875,9 @@
                 </h3>
 
                 <p>
-                    يشبه الرسول بولس الحالة الحاضرة
-                    بالطفولة والحالة الأبدية بالنضج:
+                    يشبه الرسول بولس الحالة الحاضرة بالطفولة والحالة الأبدية بالنضج:
                     «لَمَّا كُنْتُ طِفْلاً كُنْتُ أَتَكَلَّمُ كَطِفْلٍ...
-                    وَلَكِنْ لَمَّا صِرْتُ رَجُلاً
-                    أَبْطَلْتُ مَا لِلطِّفْلِ».
+                    وَلَكِنْ لَمَّا صِرْتُ رَجُلاً أَبْطَلْتُ مَا لِلطِّفْلِ».
                 </p>
 
             </div>
@@ -879,16 +885,13 @@
         </div>
 
 
-        <!-- =========================
-             SECTION 4
-        ========================== -->
+        <!-- Section 4 -->
 
         <h2 class="section-title">
 
             <span>👑</span>
 
-            أَعْظَمُهُنَّ الْمَحَبَّةُ
-            (العدد 13)
+            أَعْظَمُهُنَّ الْمَحَبَّةُ (العدد 13)
 
         </h2>
 
@@ -902,10 +905,8 @@
                 </h3>
 
                 <p>
-                    «أَمَّا الآنَ فَيَثْبُتُ:
-                    الإِيمَانُ وَالرَّجَاءُ وَالْمَحَبَّةُ،
-                    هذِهِ الثَّلاَثَةُ
-                    ولكن أَعْظَمُهُنَّ الْمَحَبَّةُ».
+                    «أَمَّا الآنَ فَيَثْبُتُ: الإِيمَانُ وَالرَّجَاءُ وَالْمَحَبَّةُ،
+                    هذِهِ الثَّلاَثَةُ ولكن أَعْظَمُهُنَّ الْمَحَبَّةُ».
                 </p>
 
             </div>
@@ -920,8 +921,8 @@
                 <p>
                     لأن الإيمان سيتحول إلى عيان في السماء،
                     والرجاء سيتحقق بالرؤية،
-                    أمّا المحبة فستبقى معنا في الأبدية
-                    لأن «اللَّهَ مَحَبَّةٌ».
+                    أمّا المحبة فستبقى معنا في الأبدية لأن
+                    «اللَّهَ مَحَبَّةٌ».
                 </p>
 
             </div>
@@ -929,9 +930,7 @@
         </div>
 
 
-        <!-- =========================
-             KEY VERSE
-        ========================== -->
+        <!-- Key Verse -->
 
         <div
             class="quote-box"
@@ -955,17 +954,13 @@
         </div>
 
 
-        <!-- =========================
-             FOOTER
-        ========================== -->
+        <!-- Footer -->
 
         <footer>
 
             <p>
-                ملخص دراسي -
-                دراسة الكتاب المقدس
-                (العهد الجديد -
-                رسالة كورنثوس الأولى)
+                ملخص دراسي - دراسة الكتاب المقدس
+                (العهد الجديد - رسالة كورنثوس الأولى)
             </p>
 
         </footer>
@@ -974,20 +969,17 @@
 
 
     <!-- =========================
-         OVERLAY
-    ========================== -->
+         Overlay
+    ========================= -->
 
     <div id="overlay"></div>
 
 
     <!-- =========================
-         POPUP MENU
-    ========================== -->
+         Popup Menu
+    ========================= -->
 
-    <div
-        class="popup"
-        id="popup"
-    >
+    <div class="popup" id="popup">
 
         <h2>
             الدروس والقائمة
@@ -1045,8 +1037,7 @@
 
 
         <a href="kno4to.html">
-            كورنثوس الأصحاحات
-            1 و2 و3 و4
+            كورنثوس الأصحاحات 1 و2 و3 و4
         </a>
 
 
@@ -1103,10 +1094,7 @@
         </a>
 
 
-        <button
-            id="closeBtn"
-            type="button"
-        >
+        <button id="closeBtn" type="button">
             إغلاق
         </button>
 
@@ -1114,95 +1102,92 @@
 
 
     <!-- =========================
-         JAVASCRIPT
-    ========================== -->
+         JavaScript
+    ========================= -->
 
     <script>
 
-        document.addEventListener(
-            "DOMContentLoaded",
-            function () {
+        document.addEventListener("DOMContentLoaded", function () {
 
-                const menuBtn =
-                    document.getElementById("menuBtn");
+            const menuBtn =
+                document.getElementById("menuBtn");
 
-                const popup =
-                    document.getElementById("popup");
+            const popup =
+                document.getElementById("popup");
 
-                const overlay =
-                    document.getElementById("overlay");
+            const overlay =
+                document.getElementById("overlay");
 
-                const closeBtn =
-                    document.getElementById("closeBtn");
+            const closeBtn =
+                document.getElementById("closeBtn");
 
 
-                function openMenu() {
+            function openMenu() {
 
-                    popup.style.display = "block";
+                popup.style.display = "block";
 
-                    overlay.style.display = "block";
+                overlay.style.display = "block";
 
-                    document.body.style.overflow = "hidden";
-
-                }
-
-
-                function closeMenu() {
-
-                    popup.style.display = "none";
-
-                    overlay.style.display = "none";
-
-                    document.body.style.overflow = "";
-
-                }
-
-
-                menuBtn.addEventListener(
-                    "click",
-                    function () {
-
-                        openMenu();
-
-                    }
-                );
-
-
-                closeBtn.addEventListener(
-                    "click",
-                    function () {
-
-                        closeMenu();
-
-                    }
-                );
-
-
-                overlay.addEventListener(
-                    "click",
-                    function () {
-
-                        closeMenu();
-
-                    }
-                );
-
-
-                document.addEventListener(
-                    "keydown",
-                    function (event) {
-
-                        if (event.key === "Escape") {
-
-                            closeMenu();
-
-                        }
-
-                    }
-                );
+                document.body.style.overflow = "hidden";
 
             }
-        );
+
+
+            function closeMenu() {
+
+                popup.style.display = "none";
+
+                overlay.style.display = "none";
+
+                document.body.style.overflow = "";
+
+            }
+
+
+            menuBtn.addEventListener(
+                "click",
+                function () {
+
+                    openMenu();
+
+                }
+            );
+
+
+            closeBtn.addEventListener(
+                "click",
+                function () {
+
+                    closeMenu();
+
+                }
+            );
+
+
+            overlay.addEventListener(
+                "click",
+                function () {
+
+                    closeMenu();
+
+                }
+            );
+
+
+            document.addEventListener(
+                "keydown",
+                function (event) {
+
+                    if (event.key === "Escape") {
+
+                        closeMenu();
+
+                    }
+
+                }
+            );
+
+        });
 
     </script>
 
