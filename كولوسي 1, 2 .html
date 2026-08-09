@@ -1,84 +1,484 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar" dir="rtl">
 <head>
- <title>ملخص رسالة كولوسي 1و 2</title>
- <link rel="stylesheet" href="style4.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ملخص رسالة كولوسي - الإصحاح الأول والثاني</title>
+
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --primary-light: #3b82f6;
+            --secondary: #d97706;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.8;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e1b4b 100%);
+            color: white;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            color: #fbbf24;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .intro {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin: 30px 0 20px 0;
+            padding-bottom: 8px;
+            border-bottom: 3px solid var(--secondary);
+        }
+
+        .chapter-title {
+            text-align: center;
+            color: var(--primary);
+            background: #eff6ff;
+            padding: 15px;
+            border-radius: 12px;
+            margin: 35px 0 25px;
+            border: 1px solid #bfdbfe;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 24px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .quote-box {
+            background: #fffbeb;
+            border-right: 4px solid var(--secondary);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 10px;
+            font-style: italic;
+            color: #92400e;
+        }
+
+        .summary-card {
+            background: linear-gradient(135deg, #eff6ff, #ffffff);
+            border: 2px solid #bfdbfe;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        .summary-card h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+            margin-top: 40px;
+        }
+
+        .sources {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            margin-top: 30px;
+        }
+
+        .sources h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .sources p {
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+    </style>
 </head>
+
 <body>
-<h1 id="joke">مقدمة</h1>
-<p id="joke2">بيقدم الإصحاحين الأول والتاني من رسالة بولس الرسول لاهل كولوسي واحد من أقوى النصوص اللاهوتية في الكتاب المقدس اللي بتتكلم عن سيادة السيد المسيح المطلقة وكفايته التامة للمؤمن، و بيحذر جدا من البدع والفلسفات اللي بتحاول تقلل من اهميته</p>
-<h2 id="joke3">الإصحاح الأول: سموّ شخص المسيح ورسالته</h2>
-<ol>
-    <section id="part">
-<li id="list"><h3 id="joke4">التحية والصلاة من أجل النمو (1: 1 - 14)</h3></li>
-<ul id="boring">
- <li id="list2">الشكر والتشجيع</li>
- <p id="loki">بيبدأ بولس بشكر الله على إيمان أهل كولوسي، ومحبتهم لكل القديسين، ورجائهم الخفي في السماوات</p>
- <li id="list2">الصلاة عشان المعرفة</li>
- <p id="loki">بيصلي عشان يكونوا مليانين من معرفة مشيئة الله بحكمة وفهم روحي،  و عشان يسلكوا زي ما يحق لربنا في كل عمل صالح، متقوين بقوته عشان الثبات والفرح</p>
-</ul>
-</section>
-<section id="part">
-<li id="list"><h3 id="joke4">أنشودة المسيح وسموه (1: 15 - 20)</h3></li>
-<ul id="boring">
- <li id="list2">المسيح والخلق</li>
- <p id="loki">هو صورة الله غير المنظور، وبكر كل خليقة. بيه وليه اتخلق كل اللي في السماوات واللي على الأرض (ما يُرى وما لا يُرى)</p>
- <li id="list2">المسيح والكنيسة</li>
- <p id="loki">هو رأس الجسد (الكنيسة)، وهو البداية وبكر من الأموات، عشان يكون هو متقدم في كل حاجه</p>
- <li id="list2">سرّ المصالحة</li>
- <p id="loki">الله كان عايزأن يحل فيه كل الملء، وأن يتصالح به الكل لنفسه بدم صليبه</p>
-</ul>
-</section>
-<section id="part">
-<li id="list"><h3 id="joke4">خدمة بولس وسر المسيح (1: 21 - 29)</h3></li>
-<ul id="boring">
- <li id="list2">التحول الروحي</li>
- <p id="loki">بيفكرهم بولس بأنهم كانوا زمان أعداء في الفكر، لكنه صالحهم دلوقتي في جسم بشريته بالموت عشان يحضرهم قديسين ومن غير لوم</p>
- <li id="list2">السر المكتوم</li>
- <p id="loki">"بيعلن بولس خادم الكنيسة عن السر المكتوم منذ الدهور للكل وهو: "المسيح فيكم رجاء المجد</p>
-</ul>
-</section>
-</ol>
-<h2 id="joke3">الإصحاح الثاني: الكفاية بالمسيح والتحذير من البدع</h2>
-<ol>
-    <section id="part">
-<li id="list"><h3 id="joke4">الثبات في المسيح (2: 1 - 7)</h3></li>
-<ul id="boring">
- <li id="look">بيؤكد بولس جهاده عشانهم عشان تتعزى قلوبهم ويكتشفوا كنوز الحكمة والمعرفة المذخرة في المسيح</li>
- <li id="look">بيشجعهم على السلوك فيه بثبات، متأصلين ومبنيين على الإيمان الصحيح</li>
-</ul>
-</section>
-<section id="part">
-<li id="list"><h3 id="joke4">الكفاية الكاملة والنصرة بالصليب (2: 8 - 15)</h3></li>
-<ul id="boring">
- <li id="list2">التحذير من الفلسفات</li>
- <p id="loki">بيحذرهم من الانخداع بالفلسفة والغرور الباطل المعتمد على تقاليد البشر وأركان العالم بدل من المسيح</p>
- <li id="list2">ملء اللاهوت</li>
- <p id="loki">بيعلن أن فيه يَحِلُّ كُلُّ مِلْءِ اللاَّهُوتِ جَسَدِيّاً، وَأَنْتُمْ مَمْلُؤُونَ فِيه</p>
- <li id="list2">الختان والقيامة الروحية</li>
- <p id="loki">بياخد المؤمنون ختاناً روحياً (نزع الخطية) بالمعمودية، وحيوا معه بعد أن كانوا أموات في الخطايا</p>
- <li id="list2">النصرة على الصليب</li>
- <p id="loki">مسح المسيح صك لأحكام اللي كان علينا، وجرد الرياسات والسلاطين ونصرهم جهارا في الصليب</p>
-</ul>
-</section>
-<section id="part">
-<li id="list"><h3 id="joke4">تحذير من الناموسية والشكلية (2: 16 - 23)</h3></li>
-<ul id="boring">
- <li id="list2">الحرية من الفرائض</li>
- <p id="loki">بيناديهم أنهم يدعوا حد يحكم عليهم في أكل أو شرب أو أعياد وسبوت، عشان دي كانت مجرد ظل للأمور العتيدة، أما الجسد فللمسيح</p>
- <li id="list2">التحذير من العبادة المزيفة</li>
- <p id="loki">بيحذر من التواضع الكاذب، وعبادة الملائكة، والقسوة على الجسد (الزهد الشكلي) اللي ملهاش قيمة ليها في قمع الشهوات الجسدية</p>
-</ul>
-</section>
-</ol>
-<section id="part2">
-<h4 id="end">الخلاصة المحورية</h4>
-<ul id="boring2">
- <li id="yes">الإصحاح الأول</li>
- <p id="yees">بيركز على مين هو المسيح (خالق الكون، رأس الكنيسة، والمصالح بدمه)</p>
- <li id="yes">الإصحاح الثاني</li>
- <p id="yees">بيركز على ايه اللي عندنا في المسيح (الكفاية التامة، الحرية من الفرائض، والنصرة على الخداع والفلسفات البشرية)</p>
-</ul>
-</section>
+
+<div class="container">
+
+    <!-- Header -->
+    <header>
+        <h1>ملخص رسالة كولوسي</h1>
+        <p>
+            رسالة بولس الرسول إلى أهل كولوسي
+            <br>
+            الإصحاح الأول والثاني
+        </p>
+    </header>
+
+    <!-- مقدمة -->
+    <div class="intro">
+        <strong>مقدمة</strong>
+        <p>
+            بيقدم الإصحاحين الأول والتاني من رسالة بولس الرسول لأهل كولوسي
+            واحد من أقوى النصوص اللاهوتية في الكتاب المقدس اللي بتتكلم عن
+            سيادة السيد المسيح المطلقة وكفايته التامة للمؤمن، وبيحذر جدًا
+            من البدع والفلسفات اللي بتحاول تقلل من أهميته.
+        </p>
+    </div>
+
+
+    <!-- ==================== الإصحاح الأول ==================== -->
+
+    <div class="chapter-title">
+        <h2>الإصحاح الأول: سموّ شخص المسيح ورسالته</h2>
+    </div>
+
+
+    <!-- التحية والصلاة -->
+    <h2 class="section-title">
+        <span>🙏</span>
+        <strong>التحية والصلاة من أجل النمو (1: 1 - 14)</strong>
+    </h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>الشكر والتشجيع</h3>
+            <p>
+                بيبدأ بولس بشكر الله على إيمان أهل كولوسي، ومحبتهم لكل القديسين،
+                ورجائهم الخفي في السماوات.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>الصلاة عشان المعرفة</h3>
+            <p>
+                بيصلي عشان يكونوا مليانين من معرفة مشيئة الله بحكمة وفهم روحي،
+                وعشان يسلكوا زي ما يحق لربنا في كل عمل صالح، متقوين بقوته
+                عشان الثبات والفرح.
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- أنشودة المسيح -->
+    <h2 class="section-title">
+        <span>✝️</span>
+        <strong>أنشودة المسيح وسموه (1: 15 - 20)</strong>
+    </h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>المسيح والخلق</h3>
+            <p>
+                هو صورة الله غير المنظور، وبكر كل خليقة. بيه وليه اتخلق
+                كل اللي في السماوات واللي على الأرض، ما يُرى وما لا يُرى.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>المسيح والكنيسة</h3>
+            <p>
+                هو رأس الجسد، أي الكنيسة، وهو البداية وبكر من الأموات،
+                عشان يكون هو متقدم في كل حاجة.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>سرّ المصالحة</h3>
+            <p>
+                الله كان عايز أن يحل فيه كل الملء، وأن يتصالح به الكل لنفسه
+                بدم صليبه.
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- خدمة بولس -->
+    <h2 class="section-title">
+        <span>📖</span>
+        <strong>خدمة بولس وسر المسيح (1: 21 - 29)</strong>
+    </h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>التحول الروحي</h3>
+            <p>
+                بيفكرهم بولس بأنهم كانوا زمان أعداء في الفكر، لكنه صالحهم
+                دلوقتي في جسم بشريته بالموت عشان يحضرهم قديسين ومن غير لوم.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>السر المكتوم</h3>
+            <div class="quote-box">
+                المسيح فيكم رجاء المجد.
+            </div>
+            <p>
+                بيعلن بولس، خادم الكنيسة، عن السر المكتوم منذ الدهور،
+                وهو المسيح فيكم رجاء المجد.
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- ==================== الإصحاح الثاني ==================== -->
+
+    <div class="chapter-title">
+        <h2>الإصحاح الثاني: الكفاية بالمسيح والتحذير من البدع</h2>
+    </div>
+
+
+    <!-- الثبات في المسيح -->
+    <h2 class="section-title">
+        <span>🌱</span>
+        <strong>الثبات في المسيح (2: 1 - 7)</strong>
+    </h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>الجهاد من أجل المؤمنين</h3>
+            <p>
+                بيؤكد بولس جهاده عشانهم عشان تتعزى قلوبهم ويكتشفوا كنوز
+                الحكمة والمعرفة المذخرة في المسيح.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>السلوك في المسيح</h3>
+            <p>
+                بيشجعهم على السلوك فيه بثبات، متأصلين ومبنيين على الإيمان الصحيح.
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- الكفاية والنصرة -->
+    <h2 class="section-title">
+        <span>🛡️</span>
+        <strong>الكفاية الكاملة والنصرة بالصليب (2: 8 - 15)</strong>
+    </h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>التحذير من الفلسفات</h3>
+            <p>
+                بيحذرهم من الانخداع بالفلسفة والغرور الباطل المعتمد على
+                تقاليد البشر وأركان العالم بدل من المسيح.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>ملء اللاهوت</h3>
+            <div class="quote-box">
+                فيه يحل كل ملء اللاهوت جسديًا، وأنتم مملوؤون فيه.
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>الختان والقيامة الروحية</h3>
+            <p>
+                بياخد المؤمنون ختانًا روحيًا، أي نزع الخطية، بالمعمودية،
+                وحيوا معه بعد أن كانوا أموات في الخطايا.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>النصرة على الصليب</h3>
+            <p>
+                مسح المسيح صك الأحكام اللي كان علينا، وجرد الرياسات
+                والسلاطين ونصرهم جهارًا في الصليب.
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- التحذير من الناموسية -->
+    <h2 class="section-title">
+        <span>⚠️</span>
+        <strong>تحذير من الناموسية والشكلية (2: 16 - 23)</strong>
+    </h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>الحرية من الفرائض</h3>
+            <p>
+                بيناديهم إنهم ما يدعوش حد يحكم عليهم في أكل أو شرب أو أعياد
+                وسبوت، عشان دي كانت مجرد ظل للأمور العتيدة، أما الجسد فللمسيح.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>التحذير من العبادة المزيفة</h3>
+            <p>
+                بيحذر من التواضع الكاذب، وعبادة الملائكة، والقسوة على الجسد
+                والزهد الشكلي، اللي ملهاش قيمة حقيقية في قمع الشهوات الجسدية.
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- ==================== الخلاصة ==================== -->
+
+    <h2 class="section-title">
+        <span>💡</span>
+        <strong>الخلاصة المحورية</strong>
+    </h2>
+
+    <div class="grid">
+
+        <div class="summary-card">
+            <h3>الإصحاح الأول</h3>
+            <p>
+                بيركز على مين هو المسيح:
+                خالق الكون، رأس الكنيسة، والمصالح بدمه.
+            </p>
+        </div>
+
+        <div class="summary-card">
+            <h3>الإصحاح الثاني</h3>
+            <p>
+                بيركز على إيه اللي عندنا في المسيح:
+                الكفاية التامة، والحرية من الفرائض، والنصرة على الخداع
+                والفلسفات البشرية.
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- الخلاصة النهائية -->
+    <h2 class="section-title">
+        <span>📜</span>
+        <strong>الفكرة الرئيسية للرسالة</strong>
+    </h2>
+
+    <div class="quote-box">
+        <p>
+            رسالة كولوسي بتأكد إن المسيح هو مركز كل شيء، وإن المؤمن
+            مش محتاج يضيف للمسيح فلسفات بشرية أو فرائض أو ممارسات شكلية
+            عشان يكون كامل، لأن كفايتنا وملء حياتنا موجودين في المسيح.
+        </p>
+    </div>
+
+
+    <!-- المصادر -->
+    <div class="sources">
+
+        <h3>المصادر</h3>
+
+        <p>
+            كتاب مهرجان الكرازة المرقسية 2026
+            (المرحلة الثانوية)
+        </p>
+
+        <p>
+            موقع سانت تكلا -
+            تفسير القس أنطونيوس فكري
+        </p>
+
+        <p>
+            تفسير القمص تادرس يعقوب ملطي
+        </p>
+
+        <p>
+            الموسوعة الكنسية لتفسير العهد الجديد
+            (كنيسة مارمرقس بمصر الجديدة)
+        </p>
+
+    </div>
+
+
+    <footer>
+        <p>
+            مجموعة بولس الرسول
+        </p>
+    </footer>
+
+</div>
+
 </body>
 </html>
