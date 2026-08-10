@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>يعظم انتصارنا بالذي أحبنا</title>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --primary-light: #3b82f6;
+            --secondary: #d97706;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #3e4652;
+            --border: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: cairo ;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.9;
+            padding: 25px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* top navigation and accessibility helpers */
+        nav {
+            max-width: 1100px;
+            margin: 0 auto 18px auto;
+            padding: 12px 18px;
+            background: linear-gradient(135deg,#1e3a8a 0%,#1e1b4b 100%);
+            color: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        nav h2 { color: #fbbf24; font-size: 1.1rem; }
+        nav h3 { font-size: 0.95rem; font-weight: normal; opacity: 0.9; }
+
+        #menuBtn { border: none; background: #fbbf24; color: #1e1b4b; width:44px; height:40px; border-radius:8px; cursor:pointer }
+
+        .skip-link { position: absolute; left: -9999px; top: auto; width:1px; height:1px; overflow:hidden }
+        .skip-link:focus { left: 12px; top: 12px; width: auto; height: auto; padding: 8px 12px; background: #000; color:#fff; z-index: 9999; border-radius:6px }
+
+        header {
+            text-align: center;
+            padding: 40px 10px;
+            background: linear-gradient(14deg, #1e3a8a 0%, #1e1b4b 50% , #030d1d  100% );
+            color: white;
+            border-radius: 12px 45px;
+            margin-top: 0.5px;
+            box-shadow: 0 10px 2px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.4rem;
+            margin-bottom: 10px;
+            color: #fbbf24;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin: 30px 0 20px 0;
+            padding-bottom: 8px;
+            border-bottom: 3px solid var(--secondary);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 24px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            font-family: cairo;
+        }
+
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .badge {
+            background-color: #eff6ff;
+            color: var(--primary-light);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            border: 1px solid #bfdbfe;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            background: var(--card-bg);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: right;
+        }
+
+        th, td {
+            padding: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            background-color: #f1f5f9;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .quote-box {
+            background: #fffbebfb;
+            border-right: 4px solid var(--secondary);
+            padding: 16px;
+            border-radius: 8px;
+            margin-top: 10px;
+            font-style: italic;
+            color: #92400e;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+            margin-top: 40px;
+        }
+        .points{
+            color: var(--text-muted);
+            font-size: 0.5rem;
+            font-family: casiro;
+        }
+
+        #overlay {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.55);
+            display: none;
+            z-index: 999;
+        }
+
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: min(90%, 500px);
+            max-height: 85vh;
+            overflow-y: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+            display: none;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .popup h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--secondary);
+        }
+
+        .popup a {
+            display: block;
+            text-decoration: none;
+            color: var(--primary);
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            padding: 11px;
+            margin: 8px 0;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .popup a:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateX(-3px);
+        }
+
+        .popup hr {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 18px 0;
+        }
+
+        #closeBtn {
+            margin-top: 15px;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 10px;
+            background: #dc2626;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        #closeBtn:hover {
+            background: #b91c1c;
+        }
+    </style>
+</head>
+<body>
+
+    <a class="skip-link" href="#main-content">تخطي إلى المحتوى</a>
+
+    <nav>
+        <h2>كنوشتو 26</h2>
+        <h3>فريق بولس الرسول مجموعة 2</h3>
+        <button id="menuBtn" type="button" aria-label="فتح القائمة">☰</button>
+    </nav>
+
+    <main id="main-content">
+    <div class="container">
+        
+        <!-- Header Section -->
+        <header>
+            <h1>كرونثوس الاولى اصحاح 10 </h1>
+        </header>
+
+        <!-- Section 1: Sign of the Cross -->
+        <h2 class="section-title">
+            <span>+</span>النبذه ( من تفسير القمص انطونيوس فكري) :
+ 
+        </h2>
+            <div class="card">
+                <p>عرض الأصحاح مأساة شعب الذي لم يسع و لم يرجع لله بالإمان الصحيح  حيث بعد ترك شعب كرونثوس لعباده الأوثان  رجعوا ياكلون من الذبائح المقدمه على الهيكل الوثني و الرجوع للخطيئه - شاعت الخطيئه في هذه الهياكل -    و حريتهم الخاطئه. 
+                    فبداء الرسول بولس خلال هذا الأصحاح ارشادهم الي طريق صحيح و تنوير العقلي. 
+                    </p>
+            </div>
+        <br>
+        </div>
+        <h2 class="section-title"> - إنذارات من تاريخ إسرائيل و العبره من تاريخهم :
+        </h2>
+        <div class="card">
+            <h4>
+                ●  أستخدم الرسول بولس امثله من حياه شعب إسرائيل تحديدا خلال فتره موسى﻿ و ما بعد عبور  لأنها كانت توصفهم و بها أقرب خطأ كانوا يفعلون. 
+                <br>●تحدث عن فكره ارضاء  و سرور ﻿ الرب و بعد عن الشهوه؛ "لكن بأكثرهم لم يسر الله، لأنهم ططرحوا في القفر" ( كو١ ١٠:٥). 
+                <br>●اتعمل الرسول بولس هذه الأسلوب من تهذيب و تأنيب لأن أغلب - إن لم يكن الكل - المؤمنين يستعملون حريتهم التي منحو إيها من الرب - ترك عباده الاوثان - لفعل الخطيئه في معابد و الأكل من مذابح الوثن. 
+            </h4>
+        </div>
+        <h2 class="section-title">- الأوثان و العشاء الرباني : 
+        </h2>
+        <div class="card">
+            <h4>
+                ●أوضح أن الاوثان باطله و إنها غير حيه - ليس بها قوه الهيه وليست حيه او كانت بها حياه. - 
+                <br>●أوضح لهم ان كل من يقدم ذبيحه للأوثان فهو يقدم لأرواح و كائنات شريره و يجب عليهم الرفض و توقف عن هذا الشر بجميع صوره - عادات، طقوس،اداب،عمل، صلاوات  اوثان - و عدم التعلق بها. 
+                <br>●حذرهم من الارتباك او تردد في الرجوع. 
+            </h4>
+        </div>
+        <h2 class="section-title">- حريه المؤمن : 
+        </h2>
+        <div class="card">
+            <h2>
+                اوضح فكره الحريه الصحيحه من أيه " كل إلاشياء تحل لي ولكن ليست كل الأشياء تليق" و أوضح لهم كيفيه تصرف مع كنوز الملحمات و غيرها و فكره التعامل مع الغير مسيحي. 
+            </h2>
+            </div>
+        </main>
+
+    <div id="overlay"></div>
+
+    <div class="popup" id="popup">
+
+        <h2>الدروس والقائمة</h2>
+
+        <a href="index.html">الصفحة الرئيسية</a>
+
+        <a href="الصليب.html">الصليب</a>
+
+        <a href="ابونا مخاءيل ابراهيم .html">أبونا مخائيل إبراهيم</a>
+
+        <a href="مقدمه رساله كولوسي .html">مقدمة رسالة كولوسي</a>
+
+        <a href="لماذا موت الصليب.html">لماذا موت الصليب؟</a>
+
+        <a href="سمارها و بياضها.html">سمارها وبياضها</a>
+
+        <a href="كولوسي 1, 2 .html">كولوسي 1، 2</a>
+
+        <a href="كلوسى 3.html">كولوسي 3</a>
+
+        <a href="كولوسى 4.html">كولوسي 4</a>
+
+        <a href="مقدمة عن كورنثوس.html">مقدمة عن كورنثوس</a>
+
+        <a href="kno4to.html">كورنثوس الأصحاحات 1 و2 و3 و4</a>
+
+        <a href="كورنثوس 5 6.html">كورنثوس 5، 6</a>
+
+        <a href="كورنثوس الأولي ٧ .html">كورنثوس الأولى 7</a>
+
+        <a href="كورنثوس ٨ .html">كورنثوس 8</a>
+
+        <a href="kronthosos_9.html">كورنثوس 9</a>
+
+        <a href="kronthosos_10.html">كورنثوس 10</a>
+
+        <a href="كورنثوس ١١ .html">كورنثوس 11</a>
+
+        <a href="كورنثوس الأولي ١٢ .html">كورنثوس 12</a>
+
+        <a href="كورنثوس 13. html">كورنثوس 13</a>
+
+        <a href="كورنثوس 14 .html">كورنثوس 14</a>
+
+        <a href="kronthosos_15.html">كورنثوس 15</a>
+
+        <a href="كورنثوس ١٦ .html">كورنثوس 16</a>
+
+        <a href="ka7l_3ynk_leky_tra.html">كحل عينك لكي تبصر</a>
+
+        <a href="ادمان الميديا .html">إدمان الميديا</a>
+
+        <hr>
+
+        <a href="طقس القداس .html">الطقس</a>
+
+        <a href="AIChatBot.html">قديس بولس الرسول (الذكاء الاصطناعي)</a>
+
+        <button id="closeBtn" type="button">إغلاق</button>
+
+    </div>
+
+    <script>
+
+        let menuBtn = document.getElementById("menuBtn");
+
+        let popup = document.getElementById("popup");
+
+        let closeBtn = document.getElementById("closeBtn");
+
+        let overlay = document.getElementById("overlay");
+
+        menuBtn.onclick = function () {
+
+            popup.style.display = "block";
+
+            overlay.style.display = "block";
+
+            document.body.style.overflow = "hidden";
+
+        };
+
+        closeBtn.onclick = function () {
+
+            popup.style.display = "none";
+
+            overlay.style.display = "none";
+
+            document.body.style.overflow = "";
+
+        };
+
+        overlay.onclick = function () {
+
+            popup.style.display = "none";
+
+            overlay.style.display = "none";
+
+            document.body.style.overflow = "";
+
+        };
+
+        document.addEventListener("keydown", function (event) {
+
+            if (event.key === "Escape") {
+
+                popup.style.display = "none";
+
+                overlay.style.display = "none";
+
+                document.body.style.overflow = "";
+
+            }
+
+        });
+
+    </script>
+
+    </body>
